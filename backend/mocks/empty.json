@@ -1,0 +1,8 @@
+{
+	"ads": {
+		"medium": "ma",
+		"record_tmpl": "https://192.168.1.3:8000/{medium}/1.0/{rtype}?ai=135e6e82-3037-468f-acb6-78c97d781f07&ph=a51065ab-17ee-4394-b5a7-32debc04780a&ts={txn_state}",
+		"oxt": 3.562,
+		"adunits": []
+	}
+}
