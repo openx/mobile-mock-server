@@ -1,0 +1,32 @@
+{
+	"ads": {
+		"medium": "ma",
+		"record_tmpl": "https://10.0.2.2:8000/events/{medium}/1.0/{rtype}?ai=aae57568-450a-4d45-895f-1f4289bf4331&ph=a51065ab-17ee-4394-b5a7-32debc04780a&ts={txn_state}",
+		"oxt": 23.753,
+		"adunits": [{
+			"auid": "537454411",
+			"idx": "0",
+			"refresh_delay": "10",
+			"refresh_max": "5",
+			"chain_revenue": "",
+			"chain": [{
+				"is_fallback": 0,
+				"ad_id": "540857694",
+				"adv_acct_id": "537137359",
+				"is_ng": 1,
+				"adv_id": ":537137359",
+				"brand_id": "",
+				"cpipc": 0,
+				"auct_win_is_deal": 0,
+				"pub_rev": "0",
+				"width": "320",
+				"height": "50",
+				"html": "<script src=\"https://s3-us-west-2.amazonaws.com/omsdk-files/compliance-js/omid-validation-verification-script-v1.js\"></script>\n<a href=\"https://www.openx.com/\"><img width=\"320\" height=\"50\" src=\"https://10.0.2.2:8000/image?unitId=537454411\"></img></a>",
+				"target": "_blank",
+				"ts": "2DAABBgABAAECAAIBAAsAAgAAAJkcGApIVzVuVUVsekg5HBbiqpLYkPvW2Z0BFtvWjIDX8NX_qQEAHBaN9u2L9pqN1qEBFq2P0Pjzl5yIhQEAFt7z69oLFQIRACwcFQIAHBUCAAAcJpadx4AEFQ4VBCaQuaaABBaggJyABNYAABwmnsOggAQWotXmgwQWvNXmgwQWutXmgwQVFBwUZBSABQAVBBUKFgAmAEUKAAAA",
+				"type": "html",
+				"ad_url": "<script src=\"https://s3-us-west-2.amazonaws.com/omsdk-files/compliance-js/omid-validation-verification-script-v1.js\"></script>\n<a href=\"https://www.openx.com/\"><img width=\"320\" height=\"50\" src=\"https://10.0.2.2:8000/image?unitId=537454411\"></img></a>"
+			}]
+		}]
+	}
+}
