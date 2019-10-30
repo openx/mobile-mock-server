@@ -15,6 +15,8 @@ After this navigate to your clone project folder and run:
 
 where example.crt is your generated certificate for your IP address or host. 
 
+There is included certificate for android emulator which points to 10.0.2.2 IP.
+
 Good one-liner:
 
 ```
@@ -28,4 +30,4 @@ openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
   -subj /CN=example.com
 ```
 
-where example.com is your domain, and 10.0.0.1 is your IP. You remove not needed. After this you can use example.crt with your server
+where example.com is your domain, and 10.0.0.1 is your IP. You remove not needed. After this you can use example.crt with your server.
