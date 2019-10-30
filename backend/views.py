@@ -69,7 +69,7 @@ class ImageGeneratorView(View):
         img = Image.new('RGB', (width, height), color=(73, 109, 137))
         bytes = io.BytesIO()
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype('font.ttf', 24)
+        font = ImageFont.truetype(BASE_DIR+ '/font.ttf', 24)
         textW, textH = draw.textsize("OpenX Mock Server. Unit id:" + unitId, font)
         draw.text(((width - textW) / 2, (height - textH) / 2), "OpenX Mock Server. Unit id:" + unitId,
                   fill=(255, 255, 0), font=font)
