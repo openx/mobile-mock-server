@@ -28,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+              <caret line="2" column="44" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="105">
+                <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -221,12 +233,12 @@
       <workItem from="1572260662089" duration="1774000" />
       <workItem from="1572346102522" duration="988000" />
       <workItem from="1572427699878" duration="24000" />
-      <workItem from="1572427736553" duration="450000" />
+      <workItem from="1572427736553" duration="663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26058000" />
+    <option name="totallyTimeSpent" value="26271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -406,7 +418,17 @@
     <entry file="file://$PROJECT_DIR$/install.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
