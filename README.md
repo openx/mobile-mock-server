@@ -5,8 +5,10 @@ In order to use and install this server you need to have a **Python 3**
 Additional libraries are required:
 
 ```
-pip install Django Pillow django-extensions Werkzeug pyOpenSSL
+pip3 install Django Pillow django-extensions Werkzeug pyOpenSSL
 ```
+
+or you can use **install.sh** script
 
 After this navigate to your clone project folder and run:
 `python3 manage.py runserver_plus --cert-file example.crt`
