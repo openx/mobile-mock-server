@@ -21,10 +21,10 @@ class MockView(View):
         # openRtb = loads(openRtbRaw)
         response = EMPTY_RESPONSE
         if unitId is not None:
-            logFile = open(BASE_DIR + 'backend/log.txt', 'w')
+            logFile = open(BASE_DIR + '/backend/log.txt', 'w')
             logFile.close()
             try:
-                jsonFile = open(BASE_DIR + 'backend/mocks/' + unitId + '.json', mode='r')
+                jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
                 response = jsonFile.read()
             except FileNotFoundError:
                 response = EMPTY_RESPONSE
@@ -50,7 +50,7 @@ class ApiView(View):
 
         if unitId and response:
             try:
-                jsonFile = open(BASE_DIR + 'backend/mocks/' + unitId + '.json', mode='w')
+                jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='w')
                 jsonFile.write(response)
                 jsonFile.close()
             except RuntimeError:
@@ -81,7 +81,7 @@ class ImageGeneratorView(View):
 class EventsView(View):
 
     def get(self, request):
-        logFile = open(BASE_DIR + 'backend/log.txt', 'a')
+        logFile = open(BASE_DIR + '/backend/log.txt', 'a')
         logFile.write(request.build_absolute_uri() + '\r\n')
         logFile.close()
         return HttpResponse(request)
@@ -91,7 +91,7 @@ class EventsView(View):
 class EventsLogView(View):
 
     def get(self, request):
-        logFile = open(BASE_DIR + 'backend/log.txt', 'r')
+        logFile = open(BASE_DIR + '/backend/log.txt', 'r')
         logs = [log.rstrip() for log in logFile.readlines()]
         logFile.close()
         return HttpResponse(dumps(logs), content_type="application/json")
