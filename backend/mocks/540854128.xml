@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VAST version="2.0">
+    <Ad id="540854128">
+        <Wrapper>
+            <AdSystem version="1.0">OpenX Enterprise</AdSystem>
+            <VASTAdTagURI>
+                <![CDATA[https://ssl-i.cdn.openx.com/sdks/vast.xml]]>
+            </VASTAdTagURI>
+            <AdTitle></AdTitle>
+            <Impression>
+                <![CDATA[https://ox-delivery-prod-1-europe-west1.openx.net/v/1.0/ri?ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ph=a51065ab-17ee-4394-b5a7-32debc04780a&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA&vtqe=false]]>
+            </Impression>
+            <Error>
+                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=error_vast2_[ERRORCODE]&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+            </Error>
+            <Creatives>
+                <Creative id="540854128">
+
+
+                    <Linear>
+                        <TrackingEvents>
+                            <Tracking event="creativeView">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=creativeView&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=start&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=midpoint&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=firstQuartile&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=thirdQuartile&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=complete&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="mute">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=mute&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="unmute">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=unmute&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="pause">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=pause&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="rewind">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=rewind&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="resume">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=resume&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="fullscreen">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=fullscreen&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="expand">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=expand&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="collapse">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=collapse&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="acceptInvitation">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=acceptInvitation&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+                            <Tracking event="close">
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rv?t=close&ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </Tracking>
+
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickTracking>
+                                <![CDATA[https://mobile-d.openx.net/v/1.0/rc?ai=0a884293-80b7-4595-bb4f-31ec15a3e941&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGAp2aGkyZ0k4bjkzHBbAo8rDv-2g7aIBFqfu2J6f6JXn4QEAHBabwMWJ9YXtsXQWh8nZze6SsayNAQAWhvDg2wsVAhEALBwVAgAcFQIAABwm4J3mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWvOHmgwQWkOHmgwQVDhwU9AMU2AQAFQQVChasAiasAkUKAAAA]]>
+                            </ClickTracking>
+
+                        </VideoClicks>
+                    </Linear>
+
+
+                </Creative>
+            </Creatives>
+        </Wrapper>
+    </Ad>
+</VAST>

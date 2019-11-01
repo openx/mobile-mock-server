@@ -10,6 +10,7 @@ import io
 from mock.settings import BASE_DIR
 
 EMPTY_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.json', mode='r').read()
+EMPTY_VIDEO_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.xml', mode='r').read()
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -30,6 +31,26 @@ class MockView(View):
                 response = EMPTY_RESPONSE
 
         return HttpResponse(response, content_type="application/json")
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class VideoMockView(View):
+
+    def post(self, request):
+        unitId = request.POST.get('auid')
+        # openRtbRaw = request.POST['openrtb']
+        # openRtb = loads(openRtbRaw)
+        response = EMPTY_VIDEO_RESPONSE
+        if unitId is not None:
+            logFile = open(BASE_DIR + '/backend/log.txt', 'w')
+            logFile.close()
+            try:
+                xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
+                response = xmlFile.read()
+            except FileNotFoundError:
+                response = EMPTY_VIDEO_RESPONSE
+
+        return HttpResponse(response, content_type="text/xml")
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -69,7 +90,7 @@ class ImageGeneratorView(View):
         img = Image.new('RGB', (width, height), color=(73, 109, 137))
         bytes = io.BytesIO()
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype(BASE_DIR+ '/font.ttf', 24)
+        font = ImageFont.truetype(BASE_DIR + '/font.ttf', 24)
         textW, textH = draw.textsize("OpenX Mock Server. Unit id:" + unitId, font)
         draw.text(((width - textW) / 2, (height - textH) / 2), "OpenX Mock Server. Unit id:" + unitId,
                   fill=(255, 255, 0), font=font)
