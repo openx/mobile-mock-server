@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e367006-6eab-44c4-a0ec-349698d46719" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/static/omid-validation-verification-script-v1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mocks/537454411.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mocks/537454411.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/static/banner-640x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mock/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +21,20 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mock$.coverage" NAME=" Coverage Results" MODIFIED="1571651270548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
@@ -22,25 +43,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+            <state relative-caret-position="218">
+              <caret line="87" column="14" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="14" />
               <folding>
-                <element signature="e#0#91#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/mocks/540854128.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1845">
-              <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -48,61 +55,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/mocks/540881524.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="258" selection-start-line="27" selection-start-column="253" selection-end-line="27" selection-end-column="258" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/mocks/5408815224.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="256" selection-start-line="23" selection-start-column="251" selection-end-line="23" selection-end-column="256" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/mocks/1.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/mocks/empty.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#638#670#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/mocks/537454411.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="232" selection-start-line="23" selection-start-column="232" selection-end-line="23" selection-end-column="232" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="510">
+                <caret line="187" column="9" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -121,17 +90,30 @@
       <find>APPEND</find>
       <find>static</find>
       <find>png</find>
-      <find>192.168.1.3</find>
       <find>BASE_DIR</find>
       <find>open</find>
       <find>open(</find>
       <find>BASE_DIR + 'b</find>
       <find>image</find>
       <find>https</find>
+      <find>'537454411'</find>
+      <find>sendmess</find>
+      <find>http://complianceomsdk.iabtechlab.com/sendmessage</find>
+      <find>537454411</find>
+      <find>10.0.2.2</find>
+      <find>sendMeesage</find>
+      <find>sendMessa</find>
+      <find>https://192.168.1.3:8000</find>
+      <find>send</find>
+      <find>192.168.1.3</find>
+      <find>AddM</find>
     </findStrings>
     <replaceStrings>
-      <replace>10.0.2.2</replace>
       <replace>open(BASE_DIR +</replace>
+      <replace>https://10.0.2.2:8000/</replace>
+      <replace>https://10.0.2.2:8000/events</replace>
+      <replace>192.168.1.3</replace>
+      <replace>10.0.2.2</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -146,13 +128,17 @@
         <option value="$PROJECT_DIR$/backend/log.txt" />
         <option value="$PROJECT_DIR$/backend/mocks/1992.json" />
         <option value="$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
-        <option value="$PROJECT_DIR$/backend/urls.py" />
         <option value="$PROJECT_DIR$/install.sh" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/backend/mocks/537454411.json" />
         <option value="$PROJECT_DIR$/backend/mocks/540881524.json" />
+        <option value="$PROJECT_DIR$/backend/mocks/540854128.xml" />
+        <option value="$PROJECT_DIR$/backend/mocks/empty.xml" />
         <option value="$PROJECT_DIR$/mock/settings.py" />
+        <option value="$PROJECT_DIR$/backend/urls.py" />
+        <option value="$PROJECT_DIR$/static/omid-validation-verification-script-v1.js" />
+        <option value="$PROJECT_DIR$/backend/static/omid-validation-verification-script-v1.js" />
+        <option value="$PROJECT_DIR$/backend/mocks/537454411.json" />
         <option value="$PROJECT_DIR$/backend/views.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -189,7 +175,13 @@
             <path>
               <item name="mock" type="b2602c69:ProjectViewProjectNode" />
               <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
               <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,6 +199,10 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/static" />
+      <recent name="$PROJECT_DIR$/backend/static/backend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/mocks" />
     </key>
@@ -245,7 +241,7 @@
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="true" />
-      <option name="customRunCommand" value="runserver_plus" />
+      <option name="customRunCommand" value="runserver" />
       <method v="2" />
     </configuration>
     <configuration name="mock" type="Python.DjangoServer" factoryName="Django server">
@@ -306,12 +302,30 @@
       <workItem from="1572427699878" duration="24000" />
       <workItem from="1572427736553" duration="6619000" />
       <workItem from="1572472667687" duration="1219000" />
-      <workItem from="1572607765712" duration="686000" />
+      <workItem from="1572607765712" duration="1717000" />
+      <workItem from="1572952822448" duration="2052000" />
+      <workItem from="1573044045314" duration="2626000" />
+      <workItem from="1573124981940" duration="3005000" />
+      <workItem from="1573138386372" duration="1441000" />
+      <workItem from="1573155019340" duration="171000" />
+      <workItem from="1573219314693" duration="137000" />
+      <workItem from="1573219506113" duration="2703000" />
+      <workItem from="1573465728145" duration="4365000" />
+      <workItem from="1573650653805" duration="1279000" />
+      <workItem from="1573814200029" duration="2161000" />
+      <workItem from="1574076129240" duration="5326000" />
+      <workItem from="1574162842819" duration="45000" />
+      <workItem from="1574163294251" duration="3567000" />
+      <workItem from="1574250551317" duration="1120000" />
+      <workItem from="1574337720937" duration="1532000" />
+      <workItem from="1574339819523" duration="6143000" />
+      <workItem from="1574417050139" duration="3236000" />
+      <workItem from="1574682628539" duration="1924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34132000" />
+    <option name="totallyTimeSpent" value="77996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,82 +340,114 @@
     <frame x="0" y="23" width="1920" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30298188" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36474973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299539" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299539" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.3299539" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299539" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946752" weight="0.3299539" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946752" weight="0.3299539" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005325" side_tool="true" weight="0.3299539" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299539" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3299539" />
-      <window_info anchor="bottom" id="manage.py@mock" order="13" weight="0.3299539" />
+      <window_info anchor="bottom" id="manage.py@mock" order="13" sideWeight="0.49946752" weight="0.3299539" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32960597" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32960597" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.357295" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299539" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.3299539" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946752" weight="0.3299539" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946752" weight="0.3299539" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005325" side_tool="true" weight="0.3299539" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299539" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3299539" />
+      <window_info active="true" anchor="bottom" id="manage.py@mock" order="13" sideWeight="0.49946752" visible="true" weight="0.3299539" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32960597" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32960597" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="request.headers" language="Python" />
+        <watch expression="request.GET.keys()" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>request.build_absolute_uri()</expression-string>
+        <expression-string>request.GET.keys()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.META</expression-string>
+        <expression-string>request.GET</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.meta</expression-string>
+        <expression-string>request.headers</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.</expression-string>
+        <expression-string>str(request.POST)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>open('backend/mocks/' + unitId + '.json', mode='r')</expression-string>
+        <expression-string>request.POST</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>open('mocks/' + unitId + '.json', mode='r')</expression-string>
+        <expression-string>request.get_host()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.POST.get('openrtb')</expression-string>
+        <expression-string>request.get_raw_uri()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request</expression-string>
+        <expression-string>request.get_full_path()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.GET['lol']</expression-string>
+        <expression-string>json</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request['lol']</expression-string>
+        <expression-string>logFile.read()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -432,47 +478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views.py">
+    <entry file="file://$PROJECT_DIR$/backend/mocks/empty.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/mocks/540881524.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="258" selection-start-line="27" selection-start-column="253" selection-end-line="27" selection-end-column="258" />
+        <state relative-caret-position="15">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -495,7 +504,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mock/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="315">
           <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="e#638#670#0" expanded="true" />
@@ -503,15 +512,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/mocks/537454411.json">
+    <entry file="file://$PROJECT_DIR$/backend/mocks/540881524.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="232" selection-start-line="23" selection-start-column="232" selection-end-line="23" selection-end-column="232" />
+          <caret line="23" column="273" lean-forward="true" selection-start-line="23" selection-start-column="251" selection-end-line="23" selection-end-column="273" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/mocks/540854128.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/omid-validation-verification-script-v1.js" />
+    <entry file="file://$PROJECT_DIR$/backend/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11223" selection-start-column="11223" selection-end-column="11223" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/static/omid-validation-verification-script-v1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1084">
+          <caret line="566" column="78" lean-forward="true" selection-start-line="566" selection-start-column="78" selection-end-line="566" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/mocks/537454411.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="87" column="14" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="510">
+            <caret line="187" column="9" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

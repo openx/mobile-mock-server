@@ -1,11 +1,11 @@
-from django.http import HttpResponse, Http404, HttpResponseNotFound, HttpResponseNotAllowed
-from django.utils.datastructures import MultiValueDictKeyError
+import io
+from json import loads, dumps
+
+from PIL import Image, ImageDraw, ImageFont
+from django.http import HttpResponse
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
-from json import loads, dumps
-from PIL import Image, ImageDraw, ImageFont
-import io
 
 from mock.settings import BASE_DIR
 
@@ -22,8 +22,7 @@ class MockView(View):
         # openRtb = loads(openRtbRaw)
         response = EMPTY_RESPONSE
         if unitId is not None:
-            logFile = open(BASE_DIR + '/backend/log.txt', 'w')
-            logFile.close()
+            write_log(request)
             try:
                 jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
                 response = jsonFile.read()
@@ -102,8 +101,17 @@ class ImageGeneratorView(View):
 class EventsView(View):
 
     def get(self, request):
-        logFile = open(BASE_DIR + '/backend/log.txt', 'a')
-        logFile.write(request.build_absolute_uri() + '\r\n')
+        write_log(request)
+        return HttpResponse(request)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class ClearLogView(View):
+
+    def get(self, request):
+        json = {'requests': []}
+        logFile = open(BASE_DIR + '/backend/log.txt', 'w')
+        logFile.write(dumps(json))
         logFile.close()
         return HttpResponse(request)
 
@@ -113,6 +121,20 @@ class EventsLogView(View):
 
     def get(self, request):
         logFile = open(BASE_DIR + '/backend/log.txt', 'r')
-        logs = [log.rstrip() for log in logFile.readlines()]
+        json = logFile.read()
         logFile.close()
-        return HttpResponse(dumps(logs), content_type="application/json")
+        return HttpResponse(json, content_type="application/json")
+
+
+def write_log(request):
+    logFile = open(BASE_DIR + '/backend/log.txt', 'r')
+    json = loads(logFile.read())
+    logFile.close()
+    logFile = open(BASE_DIR + '/backend/log.txt', 'w')
+    json.get('requests').append({"path": request.get_full_path(),
+                                 "host": request.get_host(),
+                                 "method": request.method,
+                                 "body": request.body.decode('utf-8'),
+                                 "queryString": request.GET})
+    logFile.write(dumps(json))
+    logFile.close()
