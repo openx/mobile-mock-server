@@ -90,6 +90,24 @@ When failed:
 }
 ```
 
+### Request example
+```
+POST /api/add_mock HTTP/1.1
+Host: 192.168.1.3:8000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: PostmanRuntime/7.20.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 23379e21-1a4c-4591-9b69-03fb3bdd08af,1b5286ee-088d-4f8d-9ec8-7dca98076779
+Host: 192.168.1.3:8000
+Accept-Encoding: gzip, deflate
+Content-Length: 2395
+Connection: keep-alive
+cache-control: no-cache
+
+mock=%7B%0A%09%22ads%22%3A+%7B%0A%09%09%22medium%22%3A+%22ma%22%2C%0A%09%09%22record_tmpl%22%3A+%22https%3A%2F%2F10.0.2.2%3A8000%2Fevents%2F%7Bmedium%7D%2F1.0%2F%7Brtype%7D%3Fai%3Daae57568-450a-4d45-895f-1f4289bf4331%26ph%3Da51065ab-17ee-4394-b5a7-32debc04780a%26ts%3D%7Btxn_state%7D%22%2C%0A%09%09%22oxt%22%3A+23.753%2C%0A%09%09%22adunits%22%3A+%5B%7B%0A%09%09%09%22auid%22%3A+%22537454411%22%2C%0A%09%09%09%22idx%22%3A+%220%22%2C%0A%09%09%09%22refresh_delay%22%3A+%2210%22%2C%0A%09%09%09%22refresh_max%22%3A+%225%22%2C%0A%09%09%09%22chain_revenue%22%3A+%22%22%2C%0A%09%09%09%22chain%22%3A+%5B%7B%0A%09%09%09%09%22is_fallback%22%3A+0%2C%0A%09%09%09%09%22ad_id%22%3A+%22540857694%22%2C%0A%09%09%09%09%22adv_acct_id%22%3A+%22537137359%22%2C%0A%09%09%09%09%22is_ng%22%3A+1%2C%0A%09%09%09%09%22adv_id%22%3A+%22%3A537137359%22%2C%0A%09%09%09%09%22brand_id%22%3A+%22%22%2C%0A%09%09%09%09%22cpipc%22%3A+0%2C%0A%09%09%09%09%22auct_win_is_deal%22%3A+0%2C%0A%09%09%09%09%22pub_rev%22%3A+%220%22%2C%0A%09%09%09%09%22width%22%3A+%22320%22%2C%0A%09%09%09%09%22height%22%3A+%2250%22%2C%0A%09%09%09%09%22html%22%3A+%22%3Cscript+src%3D%5C%22https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fomsdk-files%2Fcompliance-js%2Fomid-validation-verification-script-v1.js%5C%22%3E%3C%2Fscript%3E%5Cn%3Ca+href%3D%5C%22https%3A%2F%2Fwww.openx.com%2F%5C%22%3E%3Cimg+width%3D%5C%22320%5C%22+height%3D%5C%2250%5C%22+src%3D%5C%22https%3A%2F%2F10.0.2.2%3A8000%2Fimage%3FunitId%3D537454411%5C%22%3E%3C%2Fimg%3E%3C%2Fa%3E%22%2C%0A%09%09%09%09%22target%22%3A+%22_blank%22%2C%0A%09%09%09%09%22ts%22%3A+%222DAABBgABAAECAAIBAAsAAgAAAJkcGApIVzVuVUVsekg5HBbiqpLYkPvW2Z0BFtvWjIDX8NX_qQEAHBaN9u2L9pqN1qEBFq2P0Pjzl5yIhQEAFt7z69oLFQIRACwcFQIAHBUCAAAcJpadx4AEFQ4VBCaQuaaABBaggJyABNYAABwmnsOggAQWotXmgwQWvNXmgwQWutXmgwQVFBwUZBSABQAVBBUKFgAmAEUKAAAA%22%2C%0A%09%09%09%09%22type%22%3A+%22html%22%2C%0A%09%09%09%09%22ad_url%22%3A+%22%3Cscript+src%3D%5C%22https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fomsdk-files%2Fcompliance-js%2Fomid-validation-verification-script-v1.js%5C%22%3E%3C%2Fscript%3E%5Cn%3Ca+href%3D%5C%22https%3A%2F%2Fwww.openx.com%2F%5C%22%3E%3Cimg+width%3D%5C%22320%5C%22+height%3D%5C%2250%5C%22+src%3D%5C%22https%3A%2F%2F10.0.2.2%3A8000%2Fimage%3FunitId%3D537454411%5C%22%3E%3C%2Fimg%3E%3C%2Fa%3E%22%0A%09%09%09%7D%5D%0A%09%09%7D%5D%0A%09%7D%0A%7D&auid=540881524
+```
+
 ## Get logs
 
 `GET api/logs`

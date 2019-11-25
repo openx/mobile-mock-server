@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e367006-6eab-44c4-a0ec-349698d46719" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/static/omid-validation-verification-script-v1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/mocks/537454411.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mocks/537454411.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/static/banner-640x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mock/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +46,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/mocks/537454411.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -68,8 +70,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="510">
-                <caret line="187" column="9" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="9" />
+              <first_editor relative-caret-position="612">
+                <caret line="107" column="2321" selection-start-line="107" selection-start-column="2321" selection-end-line="107" selection-end-column="2321" />
               </first_editor>
               <second_editor />
             </state>
@@ -107,6 +109,7 @@
       <find>send</find>
       <find>192.168.1.3</find>
       <find>AddM</find>
+      <find>Add mock</find>
     </findStrings>
     <replaceStrings>
       <replace>open(BASE_DIR +</replace>
@@ -138,6 +141,7 @@
         <option value="$PROJECT_DIR$/backend/static/omid-validation-verification-script-v1.js" />
         <option value="$PROJECT_DIR$/backend/mocks/537454411.json" />
         <option value="$PROJECT_DIR$/backend/views.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -182,6 +186,12 @@
               <item name="mock" type="b2602c69:ProjectViewProjectNode" />
               <item name="mock" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="django_extensions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,12 +330,12 @@
       <workItem from="1574337720937" duration="1532000" />
       <workItem from="1574339819523" duration="6143000" />
       <workItem from="1574417050139" duration="3236000" />
-      <workItem from="1574682628539" duration="1924000" />
+      <workItem from="1574682628539" duration="2673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77996000" />
+    <option name="totallyTimeSpent" value="78745000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,18 +350,18 @@
     <frame x="0" y="23" width="1920" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36474973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36474973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299539" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.3299539" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.3299539" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946752" weight="0.3299539" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946752" weight="0.3299539" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946752" visible="true" weight="0.3299539" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005325" side_tool="true" weight="0.3299539" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299539" />
@@ -512,20 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/mocks/540881524.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="273" lean-forward="true" selection-start-line="23" selection-start-column="251" selection-end-line="23" selection-end-column="273" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/mocks/540854128.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -551,6 +547,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/mocks/540881524.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/mocks/540854128.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/mocks/537454411.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -568,21 +595,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="187" column="9" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="9" />
+          <first_editor relative-caret-position="612">
+            <caret line="107" column="2321" selection-start-line="107" selection-start-column="2321" selection-end-line="107" selection-end-column="2321" />
           </first_editor>
           <second_editor />
         </state>
