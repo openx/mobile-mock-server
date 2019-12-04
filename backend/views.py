@@ -36,11 +36,12 @@ class MockView(View):
 class VideoMockView(View):
 
     def post(self, request):
-        unitId = request.POST.get('auid')
+        unitId = request.POST.get('auid') if request.POST.get('auid') else request.POST.get('pgid')
         # openRtbRaw = request.POST['openrtb']
         # openRtb = loads(openRtbRaw)
         response = EMPTY_VIDEO_RESPONSE
         if unitId is not None:
+            write_log(request)
             logFile = open(BASE_DIR + '/backend/log.txt', 'w')
             logFile.close()
             try:
@@ -53,12 +54,19 @@ class VideoMockView(View):
 
 
 @method_decorator(csrf_exempt, name='dispatch')
-class ApiView(View):
+class AddMockView(View):
 
     def post(self, request):
+        allowed_types = {'regular': 'json', 'video': 'xml'}
+
         result = {'result': True}
         unitId = request.POST.get('auid')
         response = request.POST.get('mock')
+        type = request.POST.get('type') if request.POST.get('type') else 'regular'
+
+        if not type in allowed_types.keys():
+            result['message'] = 'Supported types: {0}'.format(', '.join(allowed_types.keys()))
+            result['result'] = False
 
         if unitId is None:
             result['message'] = 'auid is missing'
@@ -70,7 +78,7 @@ class ApiView(View):
 
         if unitId and response:
             try:
-                jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='w')
+                jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.' + allowed_types[type], mode='w')
                 jsonFile.write(response)
                 jsonFile.close()
             except RuntimeError:

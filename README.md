@@ -68,7 +68,9 @@ Returns `text/xml` with video ad response
 ### Params
 `auid` - unit id (required)
 
-`mock` - needed mock response
+`mock` - needed mock response (required)
+
+`type` - needed mock type. Currently supported: `regular` and `video` (optional, default is regular)
 
 ### Type
 `application/x-www-form-urlencoded`
