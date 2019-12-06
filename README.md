@@ -190,7 +190,7 @@ No params
 `GET image`
 
 ### Params
-```unitId``` - unit id which will be used as a text on a banner. (required)
+```auid``` - unit id which will be used as a text on a banner. (required)
 
 ```width``` - width in pixels (default 640)
 

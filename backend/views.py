@@ -93,7 +93,7 @@ class ImageGeneratorView(View):
     def get(self, request):
         width = int(request.GET.get('width')) if request.GET.get('width') else 640
         height = int(request.GET.get('height')) if request.GET.get('height') else 100
-        unitId = request.GET.get('unitId')
+        unitId = request.GET.get('auid')
         img = Image.new('RGB', (width, height), color=(73, 109, 137))
         bytes = io.BytesIO()
         draw = ImageDraw.Draw(img)
