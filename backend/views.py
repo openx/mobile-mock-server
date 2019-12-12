@@ -1,5 +1,6 @@
 import io
-from json import loads, dumps
+import urllib.parse
+from json import dumps
 
 from PIL import Image, ImageDraw, ImageFont
 from django.http import HttpResponse
@@ -7,6 +8,7 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
+from backend.models import LogModel
 from mock.settings import BASE_DIR
 
 EMPTY_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.json', mode='r').read()
@@ -42,8 +44,6 @@ class VideoMockView(View):
         response = EMPTY_VIDEO_RESPONSE
         if unitId is not None:
             write_log(request)
-            logFile = open(BASE_DIR + '/backend/log.txt', 'w')
-            logFile.close()
             try:
                 xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
                 response = xmlFile.read()
@@ -117,10 +117,7 @@ class EventsView(View):
 class ClearLogView(View):
 
     def get(self, request):
-        json = {'requests': []}
-        logFile = open(BASE_DIR + '/backend/log.txt', 'w')
-        logFile.write(dumps(json))
-        logFile.close()
+        LogModel.objects.all().delete()
         return HttpResponse(request)
 
 
@@ -128,21 +125,21 @@ class ClearLogView(View):
 class EventsLogView(View):
 
     def get(self, request):
-        logFile = open(BASE_DIR + '/backend/log.txt', 'r')
-        json = logFile.read()
-        logFile.close()
-        return HttpResponse(json, content_type="application/json")
+        json = {'requests': []}
+
+        for log in LogModel.objects.all():
+            json['requests'].append({'path' : log.path,
+                                     'host' : log.host,
+                                     'method' : log.method,
+                                     'body' : log.body,
+                                     'queryString': urllib.parse.parse_qs(log.query_string)})
+
+        return HttpResponse(dumps(json), content_type="application/json")
 
 
 def write_log(request):
-    logFile = open(BASE_DIR + '/backend/log.txt', 'r')
-    json = loads(logFile.read())
-    logFile.close()
-    logFile = open(BASE_DIR + '/backend/log.txt', 'w')
-    json.get('requests').append({"path": request.get_full_path(),
-                                 "host": request.get_host(),
-                                 "method": request.method,
-                                 "body": request.body.decode('utf-8'),
-                                 "queryString": request.GET})
-    logFile.write(dumps(json))
-    logFile.close()
+    LogModel(path=request.get_full_path(),
+             host=request.get_host(),
+             method=request.method,
+             body=request.body.decode('utf-8'),
+             query_string=urllib.parse.urlencode(request.GET)).save()
