@@ -42,8 +42,6 @@ class VideoMockView(View):
         response = EMPTY_VIDEO_RESPONSE
         if unitId is not None:
             write_log(request)
-            logFile = open(BASE_DIR + '/backend/log.txt', 'w')
-            logFile.close()
             try:
                 xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
                 response = xmlFile.read()
