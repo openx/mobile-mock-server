@@ -48,6 +48,26 @@ where example.com is your domain, and 10.0.0.1 is your IP. You remove not needed
 Returns `application/json` with an ad response
 
 
+### Request example
+
+```
+curl -X POST \
+  https://localhost/ma/1.0/acj \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 14' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Cookie: i=0563f8b6-1cf2-0748-1940-670f86558a55|1575290845; pd=v2|1575375930|gu' \
+  -H 'Host: mobile-d.openx.net' \
+  -H 'Postman-Token: 49e4ac05-ef66-432e-8a52-65d80b3b93b2,3f6af8f2-60bc-4e82-ad75-4f9df620fb5d' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache' \
+  -d auid=540854022
+```
+
+
 ## Get video ad response
 
 `POST v/1.0/av`
@@ -60,6 +80,25 @@ Returns `application/json` with an ad response
 
 ### Returns
 Returns `text/xml` with video ad response
+
+### Request Example
+
+```
+curl -X POST \
+  https://localhost/v/1.0/av \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 14' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Cookie: i=0563f8b6-1cf2-0748-1940-670f86558a55|1575290845; pd=v2|1575375930|gu' \
+  -H 'Host: mobile-d.openx.net' \
+  -H 'Postman-Token: 3c3329d5-adc5-421d-bb84-b8ff381914c3,6113d21f-0d7a-4111-b7d3-720a64436120' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache' \
+  -d auid=540854022
+```
 
 ## Add mock
 
@@ -94,20 +133,19 @@ When failed:
 
 ### Request example
 ```
-POST /api/add_mock HTTP/1.1
-Host: 192.168.1.3:8000
-Content-Type: application/x-www-form-urlencoded
-User-Agent: PostmanRuntime/7.20.1
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 23379e21-1a4c-4591-9b69-03fb3bdd08af,1b5286ee-088d-4f8d-9ec8-7dca98076779
-Host: 192.168.1.3:8000
-Accept-Encoding: gzip, deflate
-Content-Length: 2395
-Connection: keep-alive
-cache-control: no-cache
-
-mock=%7B%0A%09%22ads%22%3A+%7B%0A%09%09%22medium%22%3A+%22ma%22%2C%0A%09%09%22record_tmpl%22%3A+%22https%3A%2F%2F10.0.2.2%3A8000%2Fevents%2F%7Bmedium%7D%2F1.0%2F%7Brtype%7D%3Fai%3Daae57568-450a-4d45-895f-1f4289bf4331%26ph%3Da51065ab-17ee-4394-b5a7-32debc04780a%26ts%3D%7Btxn_state%7D%22%2C%0A%09%09%22oxt%22%3A+23.753%2C%0A%09%09%22adunits%22%3A+%5B%7B%0A%09%09%09%22auid%22%3A+%22537454411%22%2C%0A%09%09%09%22idx%22%3A+%220%22%2C%0A%09%09%09%22refresh_delay%22%3A+%2210%22%2C%0A%09%09%09%22refresh_max%22%3A+%225%22%2C%0A%09%09%09%22chain_revenue%22%3A+%22%22%2C%0A%09%09%09%22chain%22%3A+%5B%7B%0A%09%09%09%09%22is_fallback%22%3A+0%2C%0A%09%09%09%09%22ad_id%22%3A+%22540857694%22%2C%0A%09%09%09%09%22adv_acct_id%22%3A+%22537137359%22%2C%0A%09%09%09%09%22is_ng%22%3A+1%2C%0A%09%09%09%09%22adv_id%22%3A+%22%3A537137359%22%2C%0A%09%09%09%09%22brand_id%22%3A+%22%22%2C%0A%09%09%09%09%22cpipc%22%3A+0%2C%0A%09%09%09%09%22auct_win_is_deal%22%3A+0%2C%0A%09%09%09%09%22pub_rev%22%3A+%220%22%2C%0A%09%09%09%09%22width%22%3A+%22320%22%2C%0A%09%09%09%09%22height%22%3A+%2250%22%2C%0A%09%09%09%09%22html%22%3A+%22%3Cscript+src%3D%5C%22https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fomsdk-files%2Fcompliance-js%2Fomid-validation-verification-script-v1.js%5C%22%3E%3C%2Fscript%3E%5Cn%3Ca+href%3D%5C%22https%3A%2F%2Fwww.openx.com%2F%5C%22%3E%3Cimg+width%3D%5C%22320%5C%22+height%3D%5C%2250%5C%22+src%3D%5C%22https%3A%2F%2F10.0.2.2%3A8000%2Fimage%3FunitId%3D537454411%5C%22%3E%3C%2Fimg%3E%3C%2Fa%3E%22%2C%0A%09%09%09%09%22target%22%3A+%22_blank%22%2C%0A%09%09%09%09%22ts%22%3A+%222DAABBgABAAECAAIBAAsAAgAAAJkcGApIVzVuVUVsekg5HBbiqpLYkPvW2Z0BFtvWjIDX8NX_qQEAHBaN9u2L9pqN1qEBFq2P0Pjzl5yIhQEAFt7z69oLFQIRACwcFQIAHBUCAAAcJpadx4AEFQ4VBCaQuaaABBaggJyABNYAABwmnsOggAQWotXmgwQWvNXmgwQWutXmgwQVFBwUZBSABQAVBBUKFgAmAEUKAAAA%22%2C%0A%09%09%09%09%22type%22%3A+%22html%22%2C%0A%09%09%09%09%22ad_url%22%3A+%22%3Cscript+src%3D%5C%22https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fomsdk-files%2Fcompliance-js%2Fomid-validation-verification-script-v1.js%5C%22%3E%3C%2Fscript%3E%5Cn%3Ca+href%3D%5C%22https%3A%2F%2Fwww.openx.com%2F%5C%22%3E%3Cimg+width%3D%5C%22320%5C%22+height%3D%5C%2250%5C%22+src%3D%5C%22https%3A%2F%2F10.0.2.2%3A8000%2Fimage%3FunitId%3D537454411%5C%22%3E%3C%2Fimg%3E%3C%2Fa%3E%22%0A%09%09%09%7D%5D%0A%09%09%7D%5D%0A%09%7D%0A%7D&auid=540881524
+curl -X POST \
+  https://localhost/api/add_mock \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 2395' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Host: 192.168.1.3:8000' \
+  -H 'Postman-Token: e3b87ac3-fab7-478d-83c4-00f8334287ee,55ddbf5b-9488-44ed-95ba-c46e95dec6e1' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache' \
+  -d 'mock=%7B%0A%09%22ads%22%3A%20%7B%0A%09%09%22medium%22%3A%20%22ma%22%2C%0A%09%09%22record_tmpl%22%3A%20%22https%3A%2F%2F10.0.2.2%3A8000%2Fevents%2F%7Bmedium%7D%2F1.0%2F%7Brtype%7D%3Fai%3Daae57568-450a-4d45-895f-1f4289bf4331%26ph%3Da51065ab-17ee-4394-b5a7-32debc04780a%26ts%3D%7Btxn_state%7D%22%2C%0A%09%09%22oxt%22%3A%2023.753%2C%0A%09%09%22adunits%22%3A%20%5B%7B%0A%09%09%09%22auid%22%3A%20%22537454411%22%2C%0A%09%09%09%22idx%22%3A%20%220%22%2C%0A%09%09%09%22refresh_delay%22%3A%20%2210%22%2C%0A%09%09%09%22refresh_max%22%3A%20%225%22%2C%0A%09%09%09%22chain_revenue%22%3A%20%22%22%2C%0A%09%09%09%22chain%22%3A%20%5B%7B%0A%09%09%09%09%22is_fallback%22%3A%200%2C%0A%09%09%09%09%22ad_id%22%3A%20%22540857694%22%2C%0A%09%09%09%09%22adv_acct_id%22%3A%20%22537137359%22%2C%0A%09%09%09%09%22is_ng%22%3A%201%2C%0A%09%09%09%09%22adv_id%22%3A%20%22%3A537137359%22%2C%0A%09%09%09%09%22brand_id%22%3A%20%22%22%2C%0A%09%09%09%09%22cpipc%22%3A%200%2C%0A%09%09%09%09%22auct_win_is_deal%22%3A%200%2C%0A%09%09%09%09%22pub_rev%22%3A%20%220%22%2C%0A%09%09%09%09%22width%22%3A%20%22320%22%2C%0A%09%09%09%09%22height%22%3A%20%2250%22%2C%0A%09%09%09%09%22html%22%3A%20%22%3Cscript%20src%3D%5C%22https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fomsdk-files%2Fcompliance-js%2Fomid-validation-verification-script-v1.js%5C%22%3E%3C%2Fscript%3E%5Cn%3Ca%20href%3D%5C%22https%3A%2F%2Fwww.openx.com%2F%5C%22%3E%3Cimg%20width%3D%5C%22320%5C%22%20height%3D%5C%2250%5C%22%20src%3D%5C%22https%3A%2F%2F10.0.2.2%3A8000%2Fimage%3FunitId%3D537454411%5C%22%3E%3C%2Fimg%3E%3C%2Fa%3E%22%2C%0A%09%09%09%09%22target%22%3A%20%22_blank%22%2C%0A%09%09%09%09%22ts%22%3A%20%222DAABBgABAAECAAIBAAsAAgAAAJkcGApIVzVuVUVsekg5HBbiqpLYkPvW2Z0BFtvWjIDX8NX_qQEAHBaN9u2L9pqN1qEBFq2P0Pjzl5yIhQEAFt7z69oLFQIRACwcFQIAHBUCAAAcJpadx4AEFQ4VBCaQuaaABBaggJyABNYAABwmnsOggAQWotXmgwQWvNXmgwQWutXmgwQVFBwUZBSABQAVBBUKFgAmAEUKAAAA%22%2C%0A%09%09%09%09%22type%22%3A%20%22html%22%2C%0A%09%09%09%09%22ad_url%22%3A%20%22%3Cscript%20src%3D%5C%22https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fomsdk-files%2Fcompliance-js%2Fomid-validation-verification-script-v1.js%5C%22%3E%3C%2Fscript%3E%5Cn%3Ca%20href%3D%5C%22https%3A%2F%2Fwww.openx.com%2F%5C%22%3E%3Cimg%20width%3D%5C%22320%5C%22%20height%3D%5C%2250%5C%22%20src%3D%5C%22https%3A%2F%2F10.0.2.2%3A8000%2Fimage%3FunitId%3D537454411%5C%22%3E%3C%2Fimg%3E%3C%2Fa%3E%22%0A%09%09%09%7D%5D%0A%09%09%7D%5D%0A%09%7D%0A%7D&auid=540881524'
 ```
 
 ## Get logs
@@ -118,6 +156,20 @@ mock=%7B%0A%09%22ads%22%3A+%7B%0A%09%09%22medium%22%3A+%22ma%22%2C%0A%09%09%22re
 No params
 ### Type
 `application/x-www-form-urlencoded`
+
+### Request example
+```
+curl -X GET \
+  https://localhost/api/logs \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: 192.168.1.3:8000' \
+  -H 'Postman-Token: a9cfa9be-46d6-474d-80cf-3a41f142f999,30c75011-2953-477a-a275-0a5107e377bf' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache'
+```
 
 ### Returns
 Returns `application/json` with a list of requests which has been logged.
@@ -185,6 +237,20 @@ No params
 ### Returns
 200 HTTP code on success
 
+### Request example
+```
+curl -X GET \
+  https://localhost/api/clear_logs \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: 192.168.1.3:8000' \
+  -H 'Postman-Token: 198213f5-8176-49d1-8c6a-7d0e8fd5141b,009c7bb2-8689-40c9-b487-c22d50aa4c8e' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache'
+```
+
 ## Generate banner image
 
 `GET image`
@@ -200,6 +266,20 @@ No params
 `application/x-www-form-urlencoded`
 ### Returns
 PNG Image
+
+### Request example
+```
+curl -X GET \
+  'https://localhost/image?auid=12321526' \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: 192.168.1.3:8000' \
+  -H 'Postman-Token: 0cdd8ec3-e403-4fd7-869a-5803aeb7410e,2f88c921-324d-4737-8d1a-dbc150c21e19' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache'
+```
 
 ## Log any request (events)
 
