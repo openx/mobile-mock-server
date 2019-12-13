@@ -132,7 +132,7 @@ class EventsLogView(View):
                                      'host' : log.host,
                                      'method' : log.method,
                                      'body' : log.body,
-                                     'queryString': urllib.parse.parse_qs(log.query_string)})
+                                     'queryString': dict(urllib.parse.parse_qsl(log.query_string))})
 
         return HttpResponse(dumps(json), content_type="application/json")
 
