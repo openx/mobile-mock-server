@@ -54,11 +54,14 @@ class VideoMockView(View):
         response = EMPTY_VIDEO_RESPONSE
         if unitId is not None:
             write_log(request)
-            try:
-                xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
-                response = xmlFile.read()
-            except FileNotFoundError:
-                response = EMPTY_VIDEO_RESPONSE
+            if Configs.enableErrorResponse is False:
+                try:
+                    xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
+                    response = xmlFile.read()
+                except FileNotFoundError:
+                    response = EMPTY_VIDEO_RESPONSE
+        if Configs.responseLatency > 0:
+            time.sleep(Configs.responseLatency)
 
         return HttpResponse(response, content_type="text/xml")
 
@@ -157,6 +160,15 @@ class SetLatencyView(View):
 
 
 @method_decorator(csrf_exempt, name='dispatch')
+class CancelLatencyView(View):
+
+    def get(self, request):
+        Configs.responseLatency = 0
+
+        return HttpResponse(request)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
 class SetErrorView(View):
 
     def get(self, request):
@@ -166,11 +178,10 @@ class SetErrorView(View):
 
 
 @method_decorator(csrf_exempt, name='dispatch')
-class ClearConfigsView(View):
+class CancelErrorView(View):
 
     def get(self, request):
         Configs.enableErrorResponse = False
-        Configs.responseLatencyMs = .0
 
         return HttpResponse(request)
 
