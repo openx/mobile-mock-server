@@ -1,4 +1,5 @@
 import io
+import time
 import urllib.parse
 from json import dumps
 
@@ -15,6 +16,11 @@ EMPTY_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.json', mode='r').read()
 EMPTY_VIDEO_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.xml', mode='r').read()
 
 
+class Configs:
+    enableErrorResponse = False
+    responseLatency = .0
+
+
 @method_decorator(csrf_exempt, name='dispatch')
 class MockView(View):
 
@@ -25,11 +31,15 @@ class MockView(View):
         response = EMPTY_RESPONSE
         if unitId is not None:
             write_log(request)
-            try:
-                jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
-                response = jsonFile.read()
-            except FileNotFoundError:
-                response = EMPTY_RESPONSE
+            if Configs.enableErrorResponse is False:
+                try:
+                    jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
+                    response = jsonFile.read()
+                except FileNotFoundError:
+                    response = EMPTY_RESPONSE
+
+        if Configs.responseLatency > 0:
+            time.sleep(Configs.responseLatency)
 
         return HttpResponse(response, content_type="application/json")
 
@@ -44,11 +54,14 @@ class VideoMockView(View):
         response = EMPTY_VIDEO_RESPONSE
         if unitId is not None:
             write_log(request)
-            try:
-                xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
-                response = xmlFile.read()
-            except FileNotFoundError:
-                response = EMPTY_VIDEO_RESPONSE
+            if Configs.enableErrorResponse is False:
+                try:
+                    xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
+                    response = xmlFile.read()
+                except FileNotFoundError:
+                    response = EMPTY_VIDEO_RESPONSE
+        if Configs.responseLatency > 0:
+            time.sleep(Configs.responseLatency)
 
         return HttpResponse(response, content_type="text/xml")
 
@@ -135,6 +148,42 @@ class EventsLogView(View):
                                      'queryString': dict(urllib.parse.parse_qsl(log.query_string))})
 
         return HttpResponse(dumps(json), content_type="application/json")
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class SetLatencyView(View):
+
+    def post(self, request):
+        Configs.responseLatency = float(request.POST.get("latency"))/1000
+
+        return HttpResponse("{}", content_type="application/json")
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CancelLatencyView(View):
+
+    def get(self, request):
+        Configs.responseLatency = 0
+
+        return HttpResponse(request)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class SetErrorView(View):
+
+    def get(self, request):
+        Configs.enableErrorResponse = True
+
+        return HttpResponse(request)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CancelErrorView(View):
+
+    def get(self, request):
+        Configs.enableErrorResponse = False
+
+        return HttpResponse(request)
 
 
 def write_log(request):

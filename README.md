@@ -283,7 +283,7 @@ curl -X GET \
 
 ## Log any request (events)
 
-Every request sent to this URL will be logged with all the data comes int
+Every request sent to this URL will be logged with all the data comes in
 
 `GET/POST events`
 
@@ -293,3 +293,124 @@ Any number of params
 Any type
 ### Returns
 200 OK HTTP code on success
+
+## Set response with error
+
+`GET set_error`
+
+After this request all acj/vast requests will get response with error.
+
+### Params
+No params
+
+### Type
+`application/x-www-form-urlencoded`
+
+### Returns
+200 HTTP code on success
+
+### Request example
+
+```
+curl -L -X GET 'https://localhost:8000/api/set_error' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'User-Agent: PostmanRuntime/7.21.0' \
+-H 'Accept: */*' \
+-H 'Cache-Control: no-cache' \
+-H 'Postman-Token: c579e7d6-294b-47e2-8e81-4a53b21bd975' \
+-H 'Host: localhost:8000' \
+-H 'Content-Length: ' \
+-H 'Connection: keep-alive'
+```
+
+## Cancel response with error
+
+`GET cancel_error`
+
+Resets response with error flag
+
+### Params
+No params
+
+### Type
+`application/x-www-form-urlencoded`
+
+### Returns
+200 HTTP code on success
+
+### Request example
+```
+curl -L -X GET 'https://localhost:8000/api/cancel_error' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'User-Agent: PostmanRuntime/7.21.0' \
+-H 'Accept: */*' \
+-H 'Cache-Control: no-cache' \
+-H 'Postman-Token: c579e7d6-294b-47e2-8e81-4a53b21bd975' \
+-H 'Host: localhost:8000' \
+-H 'Content-Length: ' \
+-H 'Connection: keep-alive'
+```
+
+## Set response latency
+
+`POST set_latency`
+
+Sets the time in milliseconds, after which server will return response
+
+### Params
+No params
+
+### Body
+`latency` - time units in milliseconds (required)
+
+### Type
+`application/x-www-form-urlencoded`
+
+### Returns
+200 HTTP code on success
+
+### Request example
+```
+curl -L -X POST 'https://localhost:8000/api/set_latency' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'User-Agent: PostmanRuntime/7.21.0' \
+-H 'Accept: */*' \
+-H 'Cache-Control: no-cache' \
+-H 'Postman-Token: c579e7d6-294b-47e2-8e81-4a53b21bd975' \
+-H 'Host: localhost:8000' \
+-H 'Content-Length: ' \
+-H 'Connection: keep-alive' \
+--data-urlencode 'latency=1000'
+```
+
+## Cancel latency
+
+`GET cancel_latency`
+
+Disable response latency
+
+### Params
+No params
+
+### Type
+`application/x-www-form-urlencoded`
+
+### Returns
+200 HTTP code on success
+
+### Request example
+```
+curl -L -X GET 'https://localhost:8000/api/cancel_latency' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'User-Agent: PostmanRuntime/7.21.0' \
+-H 'Accept: */*' \
+-H 'Cache-Control: no-cache' \
+-H 'Postman-Token: c579e7d6-294b-47e2-8e81-4a53b21bd975' \
+-H 'Host: localhost:8000' \
+-H 'Content-Length: ' \
+-H 'Connection: keep-alive'
+```
