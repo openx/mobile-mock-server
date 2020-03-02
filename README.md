@@ -10,12 +10,18 @@ pip3 install Django Pillow django-extensions Werkzeug pyOpenSSL
 
 or you can use **install.sh** script
 
-After this navigate to your clone project folder and run:
+After this navigate to your clone project folder and perform migrations:
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+After this you can run the mock-server:
+
 `python3 manage.py runserver_plus --cert-file example.crt`
 
-where example.crt is your generated certificate for your IP address or host. 
-
-There is included certificate for android emulator which points to 10.0.2.2 IP.
+where example.crt is your generated certificate for your IP address or host. By default the server runs on the `8000`
+port.
 
 Good one-liner:
 
@@ -31,6 +37,20 @@ openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
 ```
 
 where example.com is your domain, and 10.0.0.1 is your IP. You remove not needed. After this you can use example.crt with your server.
+
+There is included a certificate for android emulator which points to 10.0.2.2 IP:
+```
+python3 manage.py runserver_plus 10.0.2.2:8000 --cert-file emulator.crt
+```
+
+**For MacOS users:**<br>
+You may need to add the alias `10.0.0.2` to `localhost` in this case:
+
+`sudo ifconfig lo0 alias 10.0.2.2`
+
+See this [article](https://medium.com/@david.limkys/permanently-create-an-ifconfig-loopback-alias-macos-b7c93a8b0db) if
+you want to add this alias permanently.
+
     
 # HTTP API
 
@@ -52,7 +72,7 @@ Returns `application/json` with an ad response
 
 ```
 curl -X POST \
-  https://localhost/ma/1.0/acj \
+  https://localhost:8000/ma/1.0/acj \
   -H 'Accept: */*' \
   -H 'Accept-Encoding: gzip, deflate' \
   -H 'Cache-Control: no-cache' \
@@ -67,6 +87,17 @@ curl -X POST \
   -d auid=540854022
 ```
 
+#### Note:
+If you get the error message:
+```
+curl: (60) SSL certificate problem: self signed certificate
+...
+```
+add the **-k** key to the request:
+```
+curl -k -X POST 
+...
+```
 
 ## Get video ad response
 
@@ -85,7 +116,7 @@ Returns `text/xml` with video ad response
 
 ```
 curl -X POST \
-  https://localhost/v/1.0/av \
+  https://localhost:8000/v/1.0/av \
   -H 'Accept: */*' \
   -H 'Accept-Encoding: gzip, deflate' \
   -H 'Cache-Control: no-cache' \
@@ -134,7 +165,7 @@ When failed:
 ### Request example
 ```
 curl -X POST \
-  https://localhost/api/add_mock \
+  https://localhost:8000/api/add_mock \
   -H 'Accept: */*' \
   -H 'Accept-Encoding: gzip, deflate' \
   -H 'Cache-Control: no-cache' \
@@ -160,7 +191,7 @@ No params
 ### Request example
 ```
 curl -X GET \
-  https://localhost/api/logs \
+  https://localhost:8000/api/logs \
   -H 'Accept: */*' \
   -H 'Accept-Encoding: gzip, deflate' \
   -H 'Cache-Control: no-cache' \
@@ -240,7 +271,7 @@ No params
 ### Request example
 ```
 curl -X GET \
-  https://localhost/api/clear_logs \
+  https://localhost:8000/api/clear_logs \
   -H 'Accept: */*' \
   -H 'Accept-Encoding: gzip, deflate' \
   -H 'Cache-Control: no-cache' \
@@ -270,7 +301,7 @@ PNG Image
 ### Request example
 ```
 curl -X GET \
-  'https://localhost/image?auid=12321526' \
+  'https://localhost:8000/image?auid=12321526' \
   -H 'Accept: */*' \
   -H 'Accept-Encoding: gzip, deflate' \
   -H 'Cache-Control: no-cache' \
