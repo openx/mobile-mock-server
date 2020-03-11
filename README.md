@@ -16,14 +16,13 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-After this you can run the mock-server:
+After this you can run the mock-server with predefined self-signed sertificates:
 
-`python3 manage.py runserver_plus --cert-file example.crt`
+**Android**: `manage.py runserver_plus 0.0.0.0:8000 --cert-file emulator.crt`
+**iOS**: `python3 manage.py runserver_plus 10.0.2.2:8000 --cert-file emulator.crt`
 
-where example.crt is your generated certificate for your IP address or host. By default the server runs on the `8000`
-port.
-
-Good one-liner:
+## Generating of certificate
+If you want to generate own certificate here is a good one-liner:
 
 ```
 openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
@@ -38,18 +37,14 @@ openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
 
 where example.com is your domain, and 10.0.0.1 is your IP. You remove not needed. After this you can use example.crt with your server.
 
-There is included a certificate for android emulator which points to 10.0.2.2 IP:
-```
-python3 manage.py runserver_plus 10.0.2.2:8000 --cert-file emulator.crt
-```
+## iOS: Setup loclalhost alias
 
-**For MacOS users:**<br>
 You may need to add the alias `10.0.0.2` to `localhost` in this case:
 
 `sudo ifconfig lo0 alias 10.0.2.2`
 
 See this [article](https://medium.com/@david.limkys/permanently-create-an-ifconfig-loopback-alias-macos-b7c93a8b0db) if
-you want to add this alias permanently.
+you want to add the alias permanently.
 
     
 # HTTP API
