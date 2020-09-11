@@ -3,6 +3,7 @@ from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
+    path('openrtb2/auction', views.PrebidMockView.as_view(), name='index'),
     path('ma/1.0/acj', views.MockView.as_view(), name='index'),
     path('v/1.0/av', views.VideoMockView.as_view(), name='index'),
     path('api/add_mock', views.AddMockView.as_view(), name='api'),

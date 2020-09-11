@@ -1,7 +1,7 @@
 import io
 import time
 import urllib.parse
-from json import dumps
+from json import dumps, loads
 
 from PIL import Image, ImageDraw, ImageFont
 from django.http import HttpResponse
@@ -26,6 +26,31 @@ class MockView(View):
 
     def post(self, request):
         unitId = request.POST.get('auid')
+        # openRtbRaw = request.POST['openrtb']
+        # openRtb = loads(openRtbRaw)
+        response = EMPTY_RESPONSE
+        if unitId is not None:
+            write_log(request)
+            if Configs.enableErrorResponse is False:
+                try:
+                    jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
+                    response = jsonFile.read()
+                except FileNotFoundError:
+                    response = EMPTY_RESPONSE
+
+        if Configs.responseLatency > 0:
+            time.sleep(Configs.responseLatency)
+
+        return HttpResponse(response, content_type="application/json")
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class PrebidMockView(View):
+
+    def post(self, request):
+        argsList = list(request.POST.keys())
+        args = argsList[0] + argsList[1]
+        unitId = loads(args)['imp'][0]['ext']['prebid']['storedrequest']['id']
         # openRtbRaw = request.POST['openrtb']
         # openRtb = loads(openRtbRaw)
         response = EMPTY_RESPONSE
