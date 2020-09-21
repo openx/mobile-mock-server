@@ -13,6 +13,8 @@ urlpatterns = [
     path('api/cancel_error', views.CancelErrorView.as_view(), name='cancel_error'),
     path('api/set_latency', views.SetLatencyView.as_view(), name='set_latency'),
     path('api/cancel_latency', views.CancelLatencyView.as_view(), name='cancel_latency'),
+    path('api/set_random_no_bids', views.SetRandomNoBidsView.as_view(), name='set_random_no_bids'),
+    path('api/cancel_random_no_bids', views.CancelRandomNoBidsView.as_view(), name='cancel_random_no_bids'),
     path('image', views.ImageGeneratorView.as_view(), name='image'),
     re_path('events.*', views.EventsView.as_view(), name='events'),
 ]

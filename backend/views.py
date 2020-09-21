@@ -14,11 +14,16 @@ from mock.settings import BASE_DIR
 
 EMPTY_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.json', mode='r').read()
 EMPTY_VIDEO_RESPONSE = open(BASE_DIR + '/backend/mocks/empty.xml', mode='r').read()
+NO_BIDS_RESPONSE = open(BASE_DIR + '/backend/mocks/no_bids.json', mode='r').read()
+
+MAX_FAILED_REQUESTS = 3
 
 
 class Configs:
     enableErrorResponse = False
     responseLatency = .0
+    enableRandomNoBids = False
+    failedBidRequestCount = 0
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -51,9 +56,19 @@ class PrebidMockView(View):
         argsList = list(request.POST.keys())
         args = argsList[0] + argsList[1]
         unitId = loads(args)['imp'][0]['ext']['prebid']['storedrequest']['id']
+
         # openRtbRaw = request.POST['openrtb']
         # openRtb = loads(openRtbRaw)
-        response = EMPTY_RESPONSE
+        response = NO_BIDS_RESPONSE
+
+        randomInt = randint(0, 100)
+        if randomInt % 2 is 1 and Configs.failedBidRequestCount < MAX_FAILED_REQUESTS:
+            Configs.failedBidRequestCount += 1
+            return HttpResponse(response, content_type="application/json")
+
+        Configs.failedBidRequestCount = 0
+
+
         if unitId is not None:
             write_log(request)
             if Configs.enableErrorResponse is False:
@@ -61,7 +76,7 @@ class PrebidMockView(View):
                     jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
                     response = jsonFile.read()
                 except FileNotFoundError:
-                    response = EMPTY_RESPONSE
+                    response = NO_BIDS_RESPONSE
 
         if Configs.responseLatency > 0:
             time.sleep(Configs.responseLatency)
@@ -210,6 +225,23 @@ class CancelErrorView(View):
 
         return HttpResponse(request)
 
+@method_decorator(csrf_exempt, name='dispatch')
+class SetRandomNoBidsView(View):
+
+    def post(self, request):
+        Configs.enableRandomNoBids = True
+
+        return HttpResponse("{}", content_type="application/json")
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CancelRandomNoBidsView(View):
+
+    def get(self, request):
+        Configs.enableRandomNoBids = False
+        Configs.failedBidRequestCount = 0
+
+        return HttpResponse(request)
 
 def write_log(request):
     LogModel(path=request.get_full_path(),
