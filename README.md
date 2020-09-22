@@ -440,3 +440,43 @@ curl -L -X GET 'https://localhost:8000/api/cancel_latency' \
 -H 'Content-Length: ' \
 -H 'Connection: keep-alive'
 ```
+
+## Set random no bids
+
+`POST set_random_no_bids`
+
+After this request all `openrtb2/auction` requests will have a random chance to return response with no bids. Maximum 3 times in a row.
+
+### Params
+No params
+
+### Type
+`application/x-www-form-urlencoded`
+
+### Returns
+200 HTTP code on success
+
+### Request example
+```
+curl --insecure --location --request POST 'https://localhost:8000/api/set_random_no_bids'
+```
+
+## Cancel random no bids
+
+`GET cancel_random_no_bids`
+
+Disable random no bids response.
+
+### Params
+No params
+
+### Type
+`application/x-www-form-urlencoded`
+
+### Returns
+200 HTTP code on success
+
+### Request example
+```
+curl --insecure --location --request GET 'https://localhost:8000/api/cancel_random_no_bids'
+```
