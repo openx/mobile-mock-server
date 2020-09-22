@@ -1,6 +1,7 @@
 import io
 import time
 import urllib.parse
+import random
 from json import dumps, loads
 
 from PIL import Image, ImageDraw, ImageFont
@@ -53,21 +54,17 @@ class MockView(View):
 class PrebidMockView(View):
 
     def post(self, request):
-        argsList = list(request.POST.keys())
-        args = argsList[0] + argsList[1]
-        unitId = loads(args)['imp'][0]['ext']['prebid']['storedrequest']['id']
+        unitId = loads(request.body)['imp'][0]['ext']['prebid']['storedrequest']['id']
+        response = NO_BIDS_RESPONSE
 
         # openRtbRaw = request.POST['openrtb']
         # openRtb = loads(openRtbRaw)
-        response = NO_BIDS_RESPONSE
 
-        randomInt = randint(0, 100)
-        if randomInt % 2 is 1 and Configs.failedBidRequestCount < MAX_FAILED_REQUESTS:
+        if self.shouldFailBidRequest():
             Configs.failedBidRequestCount += 1
             return HttpResponse(response, content_type="application/json")
 
         Configs.failedBidRequestCount = 0
-
 
         if unitId is not None:
             write_log(request)
@@ -82,6 +79,9 @@ class PrebidMockView(View):
             time.sleep(Configs.responseLatency)
 
         return HttpResponse(response, content_type="application/json")
+
+    def shouldFailBidRequest(self):
+        return Configs.enableRandomNoBids and Configs.failedBidRequestCount < MAX_FAILED_REQUESTS and random.random() < 0.5
 
 
 @method_decorator(csrf_exempt, name='dispatch')
