@@ -1,0 +1,64 @@
+{
+	"id": "397A7077-2DE2-45BC-B566-B47395531F2C",
+	"seatbid": [{
+		"bid": [{
+			"id": "test-bid-id-1",
+			"impid": "D536E51A-49CD-4BD7-B547-8566CEFAA05E",
+			"price": 0.11692000000167431,
+			"adm": "<html><div>You Won! This is a test bid</div></html>",
+			"adid": "test-ad-id-12345",
+			"adomain": ["openx.com"],
+			"crid": "test-creative-id-1",
+			"w": 300,
+			"h": 250,
+			"ext": {
+				"prebid": {
+					"cache": {
+						"key": "",
+						"url": "",
+						"bids": {
+							"url": "prebid.devint.openx.net/cache?uuid=479fc35f-4755-4521-a5d6-413058582cff",
+							"cacheId": "479fc35f-4755-4521-a5d6-413058582cff"
+						}
+					},
+					"targeting": {
+						"hb_bidder": "openx",
+						"hb_bidder_openx": "openx",
+						"hb_cache_host": "prebid.devint.openx.net",
+						"hb_cache_host_openx": "prebid.devint.openx.net",
+						"hb_cache_id": "479fc35f-4755-4521-a5d6-413058582cff",
+						"hb_cache_id_openx": "479fc35f-4755-4521-a5d6-413058582cff",
+						"hb_cache_path": "/cache",
+						"hb_cache_path_openx": "/cache",
+						"hb_env": "mobile-app",
+						"hb_env_openx": "mobile-app",
+						"hb_pb": "0.10",
+						"hb_pb_openx": "0.10",
+						"hb_size": "300x250",
+						"hb_size_openx": "300x250"
+					},
+					"type": "banner"
+				},
+				"bidder": {
+					"ad_ox_cats": [2],
+					"agency_id": "agency_10",
+					"brand_id": "brand_10",
+					"buyer_id": "buyer_10",
+					"matching_ad_id": {
+						"campaign_id": 1,
+						"creative_id": 3,
+						"placement_id": 2
+					},
+					"next_highest_bid_price": 0.099
+				}
+			}
+		}],
+		"seat": "openx"
+	}],
+	"cur": "USD",
+	"ext": {
+		"responsetimemillis": {
+			"openx": 6
+		}
+	}
+}
