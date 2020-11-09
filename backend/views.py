@@ -5,7 +5,7 @@ import random
 from json import dumps, loads
 
 from PIL import Image, ImageDraw, ImageFont
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404, HttpResponseNotFound
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -38,16 +38,34 @@ class MockView(View):
         if unitId is not None:
             write_log(request)
             if Configs.enableErrorResponse is False:
-                try:
-                    jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
-                    response = jsonFile.read()
-                except FileNotFoundError:
-                    response = EMPTY_RESPONSE
+                response = findMock(unitId + ".json", ["acj"], EMPTY_RESPONSE)
 
         if Configs.responseLatency > 0:
             time.sleep(Configs.responseLatency)
 
         return HttpResponse(response, content_type="application/json")
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CacheMockView(View):
+
+    def get(self, request):
+        unitId = request.GET.get('uuid')
+        # openRtbRaw = request.POST['openrtb']
+        # openRtb = loads(openRtbRaw)
+        response = EMPTY_RESPONSE
+        if unitId is not None:
+            write_log(request)
+            if Configs.enableErrorResponse is False:
+                response = findMock(unitId + ".json", ["prebid", "cache"], None)
+
+        if Configs.responseLatency > 0:
+            time.sleep(Configs.responseLatency)
+
+        if response is None:
+            return HttpResponseNotFound("No content stored for uuid=" + unitId)
+        else:
+            return HttpResponse(response, content_type="application/json")
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -62,6 +80,7 @@ class PrebidMockView(View):
 
         if self.shouldFailBidRequest():
             Configs.failedBidRequestCount += 1
+            print("Failing the bid request due to shouldFailBidRequest().")
             return HttpResponse(response, content_type="application/json")
 
         Configs.failedBidRequestCount = 0
@@ -69,11 +88,7 @@ class PrebidMockView(View):
         if unitId is not None:
             write_log(request)
             if Configs.enableErrorResponse is False:
-                try:
-                    jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.json', mode='r')
-                    response = jsonFile.read()
-                except FileNotFoundError:
-                    response = NO_BIDS_RESPONSE
+                response = findMock(unitId + ".json", ["prebid"], NO_BIDS_RESPONSE)
 
         if Configs.responseLatency > 0:
             time.sleep(Configs.responseLatency)
@@ -95,11 +110,7 @@ class VideoMockView(View):
         if unitId is not None:
             write_log(request)
             if Configs.enableErrorResponse is False:
-                try:
-                    xmlFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.xml', mode='r')
-                    response = xmlFile.read()
-                except FileNotFoundError:
-                    response = EMPTY_VIDEO_RESPONSE
+                response = findMock(unitId + ".xml", ["video"], EMPTY_VIDEO_RESPONSE)
         if Configs.responseLatency > 0:
             time.sleep(Configs.responseLatency)
 
@@ -131,7 +142,7 @@ class AddMockView(View):
 
         if unitId and response:
             try:
-                jsonFile = open(BASE_DIR + '/backend/mocks/' + unitId + '.' + allowed_types[type], mode='w')
+                jsonFile = open(BASE_DIR + '/backend/mocks/_dynamic/' + unitId + '.' + allowed_types[type], mode='w')
                 jsonFile.write(response)
                 jsonFile.close()
             except RuntimeError:
@@ -249,3 +260,20 @@ def write_log(request):
              method=request.method,
              body=request.body.decode('utf-8'),
              query_string=urllib.parse.urlencode(request.GET)).save()
+
+def findMock(name, paths, fallback):
+    folders = ["_dynamic/"]
+    for skipCount in range(len(paths)):
+        s = ""
+        for i in range(len(paths) - skipCount):
+            s = s + paths[i] + "/"
+        folders.append(s)
+    for nextFolder in folders:
+        mockFileName = BASE_DIR + '/backend/mocks/' + nextFolder + name
+        try:
+            jsonFile = open(mockFileName, mode='r')
+            result = jsonFile.read()
+            return result
+        except FileNotFoundError:
+            pass
+    return fallback
