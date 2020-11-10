@@ -64,8 +64,14 @@ class CacheMockView(View):
 
         if response is None:
             return HttpResponseNotFound("No content stored for uuid=" + unitId)
-        else:
-            return HttpResponse(response, content_type="application/json")
+
+        result = HttpResponse(response, content_type="application/json")
+        originHeader = request.headers.get('origin')
+        if originHeader is not None:
+            result['access-control-allow-credentials'] = 'true'
+            result['access-control-allow-origin'] = originHeader
+            result['vary'] = 'Origin'
+        return result
 
 
 @method_decorator(csrf_exempt, name='dispatch')
