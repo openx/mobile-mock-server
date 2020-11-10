@@ -1,4 +1,5 @@
 import io
+import json
 import time
 import urllib.parse
 import random
@@ -90,6 +91,12 @@ class PrebidMockView(View):
             return HttpResponse(response, content_type="application/json")
 
         Configs.failedBidRequestCount = 0
+
+        nativeRequest = loads(request.body)['imp'][0]['native']['request']
+        if nativeRequest is not None:
+            assets = json.loads(nativeRequest)['assets']
+            if assets is not None and len(assets) == 0:
+                return HttpResponse("Invalid request: request.imp[0].native.request.assets must be an array containing at least one object", status=400)
 
         if unitId is not None:
             write_log(request)
