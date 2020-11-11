@@ -79,7 +79,8 @@ class CacheMockView(View):
 class PrebidMockView(View):
 
     def post(self, request):
-        unitId = loads(request.body)['imp'][0]['ext']['prebid']['storedrequest']['id']
+        imp0 = loads(request.body)['imp'][0]
+        unitId = imp0['ext']['prebid']['storedrequest']['id']
         response = NO_BIDS_RESPONSE
 
         # openRtbRaw = request.POST['openrtb']
@@ -92,8 +93,8 @@ class PrebidMockView(View):
 
         Configs.failedBidRequestCount = 0
 
-        nativeRequest = loads(request.body)['imp'][0]['native']['request']
-        if nativeRequest is not None:
+        if 'native' in imp0 and 'request' in imp0['native']:
+            nativeRequest = imp0['native']['request']
             assets = json.loads(nativeRequest)['assets']
             if assets is not None and len(assets) == 0:
                 return HttpResponse("Invalid request: request.imp[0].native.request.assets must be an array containing at least one object", status=400)
