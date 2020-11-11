@@ -1,4 +1,5 @@
 import io
+import json
 import time
 import urllib.parse
 import random
@@ -64,8 +65,14 @@ class CacheMockView(View):
 
         if response is None:
             return HttpResponseNotFound("No content stored for uuid=" + unitId)
-        else:
-            return HttpResponse(response, content_type="application/json")
+
+        result = HttpResponse(response, content_type="application/json")
+        originHeader = request.headers.get('origin')
+        if originHeader is not None:
+            result['access-control-allow-credentials'] = 'true'
+            result['access-control-allow-origin'] = originHeader
+            result['vary'] = 'Origin'
+        return result
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -84,6 +91,12 @@ class PrebidMockView(View):
             return HttpResponse(response, content_type="application/json")
 
         Configs.failedBidRequestCount = 0
+
+        nativeRequest = loads(request.body)['imp'][0]['native']['request']
+        if nativeRequest is not None:
+            assets = json.loads(nativeRequest)['assets']
+            if assets is not None and len(assets) == 0:
+                return HttpResponse("Invalid request: request.imp[0].native.request.assets must be an array containing at least one object", status=400)
 
         if unitId is not None:
             write_log(request)
