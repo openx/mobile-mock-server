@@ -1,0 +1,50 @@
+{
+	"id": "9edbfe77-2986-4318-9f05-48db5560759c",
+	"seatbid": [{
+		"bid": [{
+			"id": "7e8bbd37-4f1d-46b5-9612-9c0ba2ea0951",
+			"impid": "9edbfe77-2986-4318-9f05-48db5560759c",
+			"price": 0.15,
+            "adm": "<div id='beacon_16920' style='position:absolute;left:0px;top:0px;visibility:hidden;'><img src='https://rtb-europe-west1.openx.net/win/prebid?p=FIRST&t=2DAABBgABAAECAAIBAAsAAgAAAJocGAphaWQwbkZFbTZ2HBbWhYLY3Pf4rSsWy7LXjuzhicrgAQAcFtvQ3fLN7brWERa_pcCfpqD1yoMBABa6wuH3CxUGACwcFQIAHBUCAAAcJrah8YMEFQ4VAib6596DBBaggJyABNasAgAcJp7DoIAEFsjV8IMEFuqh8YMEFuKh8YMEFRQcFMAHFIAFABUEFQoWrAImrAJFCgAAAA&ph=a51065ab-17ee-4394-b5a7-32debc04780a'/></div><script src=\"https://10.0.2.2:8000/static/omid-validation-verification-script-v1.js\"></script>\n<a href=\"https://www.openx.com/\"><img src='https://10.0.2.2:8000/image?auid=8ce2a122-0c02-4785-aab2-9b5ca158cb11&width=320&height=480' width='320' height='480' border='0' alt=''></img></a>",
+			"crid": "540944501",
+			"w": 320,
+			"h": 480,
+			"ext": {
+				"prebid": {
+					"cache": {
+						"key": "",
+						"url": "",
+						"bids": {
+							"url": "prebid.openx.net/cache?uuid=f0c3a658-9dac-46b9-bd8a-1bd39888750a",
+							"cacheId": "f0c3a658-9dac-46b9-bd8a-1bd39888750a"
+						}
+					},
+					"targeting": {
+						"hb_bidder": "openx",
+						"hb_bidder_openx": "openx",
+						"hb_cache_host": "prebid.openx.net",
+						"hb_cache_host_openx": "prebid.openx.net",
+						"hb_cache_id": "f0c3a658-9dac-46b9-bd8a-1bd39888750a",
+						"hb_cache_id_openx": "f0c3a658-9dac-46b9-bd8a-1bd39888750a",
+						"hb_cache_path": "/cache",
+						"hb_cache_path_openx": "/cache",
+						"hb_env": "mobile-app",
+						"hb_env_openx": "mobile-app",
+						"hb_pb": "0.10",
+						"hb_pb_openx": "0.10",
+						"hb_size": "320x480",
+						"hb_size_openx": "320x480"
+					},
+					"type": "banner"
+				}
+			}
+		}],
+		"seat": "openx"
+	}],
+	"cur": "USD",
+	"ext": {
+		"responsetimemillis": {
+			"openx": 73
+		}
+	}
+}

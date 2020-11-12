@@ -1,0 +1,50 @@
+{
+	"id": "ce5e3be6-5377-4415-b7d5-c34ff088fc24",
+	"seatbid": [{
+		"bid": [{
+			"id": "e996db65-c50e-423c-bcee-15e591499b0c",
+			"impid": "ce5e3be6-5377-4415-b7d5-c34ff088fc24",
+			"price": 0.15,
+            "adm": "<!DOCTYPE html>\n<html>\n\n<body>\n<script src=\"mraid.js\" type=\"text/javascript\"></script>\n<script type=\"text/javascript\" src=\"https://storage.googleapis.com/ox-cdn-devint-mobile/ads/mraid/mraid3_viewability_compliance.js\"></script>\n</body>\n\n</html><script type=\"text/javascript\">\n(function(){\n  var supportMraid = window.mraid;\n  var isMraid = false;\n  document.querySelectorAll('script').forEach(function(item) {\n    if (item.src.match('mraid.js')) isMraid = true;\n  });  \n  if (supportMraid && isMraid) {\n    mraid.isViewable() ? track() : mraid.addEventListener('viewableChange', function() {\n      mraid.isViewable() && track();\n    });\n  } else if (!isMraid) track();\n\n  function track() {\n    var pixel = new Image();\n    pixel.src = 'https://rtb-europe-west1.openx.net/win/prebid?p=FIRST&t=2DAABBgABAAECAAIBAAsAAgAAAJwcGApGVTBIWXdCVm9HHBaRyq3Up8bX5JsBFpvv8M2o8NGj2wEAHBbEl6qZl9b0paMBFsmI1NuC5JWV5AEAFpD14vcLFQYALBwVAgAcFQIAABwm_v-VhQQVDhUCJvrn3oMEFqCAnIAE1qwCABwmnsOggAQWyNXwgwQWgoCWhQQWgICWhQQVFBwUwAcUgAUAFQQVChasAiasAkUKAAAA&ph=a51065ab-17ee-4394-b5a7-32debc04780a';\n    track = function(){};\n  }\n})();\n</script>\n",
+			"crid": "542294017",
+			"w": 320,
+			"h": 480,
+			"ext": {
+				"prebid": {
+					"cache": {
+						"key": "",
+						"url": "",
+						"bids": {
+							"url": "prebid.openx.net/cache?uuid=2478c74d-cdad-42e5-a046-c4ee2b44f9b7",
+							"cacheId": "2478c74d-cdad-42e5-a046-c4ee2b44f9b7"
+						}
+					},
+					"targeting": {
+						"hb_bidder": "openx",
+						"hb_bidder_openx": "openx",
+						"hb_cache_host": "prebid.openx.net",
+						"hb_cache_host_openx": "prebid.openx.net",
+						"hb_cache_id": "2478c74d-cdad-42e5-a046-c4ee2b44f9b7",
+						"hb_cache_id_openx": "2478c74d-cdad-42e5-a046-c4ee2b44f9b7",
+						"hb_cache_path": "/cache",
+						"hb_cache_path_openx": "/cache",
+						"hb_env": "mobile-app",
+						"hb_env_openx": "mobile-app",
+						"hb_pb": "0.10",
+						"hb_pb_openx": "0.10",
+						"hb_size": "320x480",
+						"hb_size_openx": "320x480"
+					},
+					"type": "banner"
+				}
+			}
+		}],
+		"seat": "openx"
+	}],
+	"cur": "USD",
+	"ext": {
+		"responsetimemillis": {
+			"openx": 37
+		}
+	}
+}
