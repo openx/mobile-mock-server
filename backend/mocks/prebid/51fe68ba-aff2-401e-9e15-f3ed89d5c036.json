@@ -1,0 +1,76 @@
+{
+  "id": "7D118BD6-1972-49E7-BAC4-C3AE3DB82945",
+  "seatbid": [
+    {
+      "bid": [
+        {
+          "id": "test-bid-id-1",
+          "impid": "2CA244FB-489F-486C-A314-D62079D49129",
+          "price": 0.1,
+          "adm": "{\"assets\":[{\"required\":1,\"title\":{\"text\":\"OpenX (Title)\"}},{\"required\":1,\"img\":{\"type\":1,\"url\":\"https://www.saashub.com/images/app/service_logos/5/1df363c9a850/large.png?1525414023\"}},{\"required\":1,\"img\":{\"type\":3,\"url\":\"https://ssl-i.cdn.openx.com/mobile/demo-creatives/mobile-demo-banner-640x100.png\"}},{\"required\":1,\"data\":{\"type\":1,\"value\":\"OpenX (Brand)\"}},{\"required\":1,\"data\":{\"type\":2,\"value\":\"Learn all about this awesome story of someone using out OpenX SDK.\"}},{\"required\":1,\"data\":{\"type\":12,\"value\":\"Click here to visit our site!\"}}],\"link\":{\"url\":\"https://www.openx.com/\"}}",
+          "adid": "test-ad-id-12345",
+          "adomain": [
+            "openx.com"
+          ],
+          "crid": "test-creative-id-1",
+          "w": 300,
+          "h": 250,
+          "ext": {
+            "prebid": {
+              "cache": {
+                "key": "",
+                "url": "",
+                "bids": {
+                  "url": "10.0.2.2:8000/cache?uuid=f9dd1842-202f-11eb-adc1-0242ac120002",
+                  "cacheId": "f9dd1842-202f-11eb-adc1-0242ac120002"
+                }
+              },
+              "targeting": {
+                "hb_bidder": "openx",
+                "hb_bidder_openx": "openx",
+                "hb_cache_host": "10.0.2.2:8000",
+                "hb_cache_host_openx": "10.0.2.2:8000",
+                "hb_cache_id": "f9dd1842-202f-11eb-adc1-0242ac120002",
+                "hb_cache_id_openx": "f9dd1842-202f-11eb-adc1-0242ac120002",
+                "hb_cache_path": "/cache",
+                "hb_cache_path_openx": "/cache",
+                "hb_env": "mobile-app",
+                "hb_env_openx": "mobile-app",
+                "hb_pb": "0.10",
+                "hb_pb_openx": "0.10",
+                "hb_size": "300x250",
+                "hb_size_openx": "300x250"
+              },
+              "type": "banner",
+              "video": {
+                "duration": 0,
+                "primary_category": ""
+              }
+            },
+            "bidder": {
+              "ad_ox_cats": [
+                2
+              ],
+              "agency_id": "agency_10",
+              "brand_id": "brand_10",
+              "buyer_id": "buyer_10",
+              "matching_ad_id": {
+                "campaign_id": 1,
+                "creative_id": 3,
+                "placement_id": 2
+              },
+              "next_highest_bid_price": 0.099
+            }
+          }
+        }
+      ],
+      "seat": "openx"
+    }
+  ],
+  "cur": "USD",
+  "ext": {
+    "responsetimemillis": {
+      "openx": 6
+    }
+  }
+}

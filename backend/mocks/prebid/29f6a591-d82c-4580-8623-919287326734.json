@@ -1,0 +1,50 @@
+{
+	"id": "e3817ee1-d357-430f-8bce-fc57c275290c",
+	"seatbid": [{
+		"bid": [{
+			"id": "183d10ba-6a78-47d8-9791-e00a04289a2b",
+			"impid": "e3817ee1-d357-430f-8bce-fc57c275290c",
+			"price": 0.15,
+            "adm": "<script src=\"mraid.js\"></script>\n<script src=\"https://10.0.2.2:8000/static/omid-validation-verification-script-v1.js\"></script>\n<script>\n\nfunction $(element)\n{\n\telement = document.getElementById(element);\n\treturn element;\n}\nwindow._aron_init = 0;\nwindow._aron_state='none';\n\n// Viewport setup\nvar meta = document.querySelector(\"meta[name=viewport]\");\nvar head = document.getElementsByTagName(\"head\")[0];\nif (!meta)\n{\n  meta = document.createElement(\"meta\");\n  meta.name = \"viewport\";\n  meta.content = \"width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1\";\n  head.appendChild(meta);\n}\nelse\n{\n  meta.content = \"width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1\";\n}\n\nfunction initad()\n{\n\t//Inject a style\n\tconsole.log('initad() triggered.');\n\tvar head = document.getElementsByTagName(\"head\")[0];\n\tvar style = document.createElement('style');\n\tstyle.setAttribute('type', 'text/css')\n\tstyle.appendChild(document.createTextNode(' body{display:table; height:100%; width:100%;} div#arontwopartwrap{text-align:center; width:100%; background:#000; color:#f00; font-size:12px; font-family:arial;display:block; vertical-align:middle;} a{ line-height:40px; font-size:30px; padding:3px; background:#fff; color:#f00; border:1px solid #f00; display:block; height:40px; width:260px; margin:auto; text-align:center; text-decoration:none;}'));\n\thead.appendChild(style);\n\twindow._aron_init = 1;\n\n}\n\n\n\nfunction readycheck()\n{\n\tconsole.log('window.onload() triggered.');\n\tif(mraid.getState() == 'loading') \n\t{\n\t\tmraid.addEventListener(\"ready\", initad);  \n\t}\n\telse\n\t{\n\t\tinitad();\n\t}\n\tif(!mraid.isViewable())\n\t{\n\t  console.log('Adview is not visible'); //Don't die from this error, just a notice\n\t}\n\tmraid.addEventListener('error', mraiderror);\n\tmraid.addEventListener('stateChange', statechange);\n}\n\nfunction statechange()\n{\n\tconsole.log(\"MRAID State Change. State=\" + mraid.getState());\n}\n\nfunction mraiderror(message,action)\n{\n\tconsole.log(\"MRAID Error: '\"+message+\"' From: \" + action);\n}\n\nfunction twopart()\n{\n  mraid.useCustomClose(true); //No SDK close button.\n\tvar expp=mraid.getExpandProperties();//Check that useCustomClose is true.\n\tif(expp.useCustomClose==false)\n\t{\n\t\tconsole.log('ERROR: mraid.getExpandProperties() was not updated from mraid.useCustomClose()!');\n\t}\n\t\tmraid.setOrientationProperties(\n\t{\n\t\t\"forceOrientation\": \"none\",\n\t\t\"allowOrientationChange\": true\n\t});\n\tmraid.setExpandProperties({\"width\":200,\"height\":200,\"isModal\":false});//Setting this should have no effect. useCustomClose should still be true.\n\tmraid.expand(\"https://ssl-i.cdn.openx.com/mobile/iab_mraid_compliance_creatives/2_expand_2_part/part_2.html\"); //Change URL to test other pages\n}\n\nif(document.readyState==\"complete\")\n{\n\treadycheck();\n}\nelse\n{\n\twindow.addEventListener('load', readycheck, false); //DOM and MRAID check\n}\n\n</script>\n\n<div id=\"arontwopartwrap\">\n\t<a href=\"#\" onclick=\"twopart(); return false;\" id=\"twopart\">Two Part Expand</a>\n</div>",
+			"crid": "542293978",
+			"w": 320,
+			"h": 50,
+			"ext": {
+				"prebid": {
+					"cache": {
+						"key": "",
+						"url": "",
+						"bids": {
+							"url": "prebid.openx.net/cache?uuid=117c0967-7cf5-4228-99bf-06c3dd42661b",
+							"cacheId": "117c0967-7cf5-4228-99bf-06c3dd42661b"
+						}
+					},
+					"targeting": {
+						"hb_bidder": "openx",
+						"hb_bidder_openx": "openx",
+						"hb_cache_host": "prebid.openx.net",
+						"hb_cache_host_openx": "prebid.openx.net",
+						"hb_cache_id": "117c0967-7cf5-4228-99bf-06c3dd42661b",
+						"hb_cache_id_openx": "117c0967-7cf5-4228-99bf-06c3dd42661b",
+						"hb_cache_path": "/cache",
+						"hb_cache_path_openx": "/cache",
+						"hb_env": "mobile-app",
+						"hb_env_openx": "mobile-app",
+						"hb_pb": "0.10",
+						"hb_pb_openx": "0.10",
+						"hb_size": "320x50",
+						"hb_size_openx": "320x50"
+					},
+					"type": "banner"
+				}
+			}
+		}],
+		"seat": "openx"
+	}],
+	"cur": "USD",
+	"ext": {
+		"responsetimemillis": {
+			"openx": 31
+		}
+	}
+}

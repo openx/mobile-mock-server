@@ -1,0 +1,52 @@
+{
+	"id": "f329c84c-89ac-4f26-a830-f6a7c122c683",
+	"seatbid": [{
+		"bid": [{
+			"id": "46f60043-99f1-498a-b152-234358f73fdd",
+			"impid": "f329c84c-89ac-4f26-a830-f6a7c122c683",
+			"price": 0.15,
+            "adm": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST version=\"2.0\">\n    <Ad id=\"540854128\">\n        <Wrapper>\n            <AdSystem version=\"1.0\">OpenX Enterprise</AdSystem>\n            <VASTAdTagURI>\n                <![CDATA[https://10.0.2.2:8000/static/vast/vast.xml]]>\n            </VASTAdTagURI>\n            <AdTitle></AdTitle>\n            <Impression>\n                <![CDATA[https://10.0.2.2:8000/events/v/1.0/ri?ph=a51065ab-17ee-4394-b5a7-32debc04780a&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA&vtqe=false]]>\n            </Impression>\n            <Error>\n                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=error_vast2_[ERRORCODE]&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n            </Error>\n            <Creatives>\n                <Creative id=\"540854128\">\n                    <Linear>\n                        <TrackingEvents>\n                            <Tracking event=\"creativeView\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=creativeView&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"start\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=start&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"midpoint\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=midpoint&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"firstQuartile\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=firstQuartile&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"thirdQuartile\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=thirdQuartile&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"complete\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=complete&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"mute\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=mute&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"unmute\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=unmute&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"pause\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=pause&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"rewind\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=rewind&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"resume\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=resume&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"fullscreen\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=fullscreen&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"expand\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=expand&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"collapse\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=collapse&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"acceptInvitation\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=acceptInvitation&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n                            <Tracking event=\"close\">\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rv?t=close&ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </Tracking>\n\n                        </TrackingEvents>\n                        <VideoClicks>\n                            <ClickTracking>\n                                <![CDATA[https://10.0.2.2:8000/events/v/1.0/rc?ts=2DAABBgABAAECAAIBAAsAAgAAAJwcGApkaWRuYTV4cHljHBa5293wiMfo9Y8BFq--1uqu0LT_xwEAHBbMmPqI5evWsfcBFufRh7akiPPApAEAFqjsst4LFQIALBwVAgAcFQIAABwmgp7mgwQVBhUCJpC5poAEFqCAnIAE1qwCABwmnsOggAQWotXmgwQWquvmgwQWqOvmgwQVDhwU2AQUoAYAFQQVChasAiasAkUKAAAA]]>\n                            </ClickTracking>\n\n                        </VideoClicks>\n                    </Linear>\n                </Creative>\n            </Creatives>\n        </Wrapper>\n    </Ad>\n</VAST>",
+			"crid": "541059987",
+			"w": 300,
+			"h": 250,
+			"ext": {
+				"prebid": {
+					"cache": {
+						"key": "",
+						"url": "",
+						"bids": {
+							"url": "prebid.openx.net/cache?uuid=4d4ba8c2-6214-4f6c-b352-c41ca34ee347",
+							"cacheId": "4d4ba8c2-6214-4f6c-b352-c41ca34ee347"
+						}
+					},
+					"targeting": {
+						"hb_bidder": "openx",
+						"hb_bidder_openx": "openx",
+						"hb_cache_host": "prebid.openx.net",
+						"hb_cache_host_openx": "prebid.openx.net",
+						"hb_cache_id": "4d4ba8c2-6214-4f6c-b352-c41ca34ee347",
+						"hb_cache_id_openx": "4d4ba8c2-6214-4f6c-b352-c41ca34ee347",
+						"hb_cache_path": "/cache",
+						"hb_cache_path_openx": "/cache",
+						"hb_env": "mobile-app",
+						"hb_env_openx": "mobile-app",
+						"hb_pb": "0.10",
+						"hb_pb_openx": "0.10",
+						"hb_size": "300x250",
+						"hb_size_openx": "300x250",
+						"hb_uuid": "d7101133-f2a7-46ca-b7dd-f410e2265d89",
+						"hb_uuid_openx": "d7101133-f2a7-46ca-b7dd-f410e2265d89"
+					},
+					"type": "video"
+				}
+			}
+		}],
+		"seat": "openx"
+	}],
+	"cur": "USD",
+	"ext": {
+		"responsetimemillis": {
+			"openx": 31
+		}
+	}
+}
