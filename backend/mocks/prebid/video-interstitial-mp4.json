@@ -5,7 +5,7 @@
 			"id": "test-bid-id-1",
 			"impid": "E87D0C44-7365-4A42-B2A3-51AE58F169A0",
 			"price": 0.11701999999468729,
-			"adm": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST version=\"2.0\">\n\t<Ad id=\"1\">\n\t\t<Wrapper>\n\t\t\t<AdSystem>OX</AdSystem>\n\t\t\t<VASTAdTagURI><![CDATA[https://10.0.2.2:8000/static/vast_mp4.xml]]></VASTAdTagURI>\n\t\t\t<Impression></Impression>\n\t\t\t<Creatives>\n\t\t\t\t<Creative>\n\t\t\t\t\t<Linear>\n\t\t\t\t\t\t<TrackingEvents>\n\t\t\t\t\t\t\t<ClickTracking><![CDATA[https://mobile-d.openx.net/v/1.0/rc?ts=1]]></ClickTracking>\n\t\t\t\t\t\t</TrackingEvents>\n\t\t\t\t\t\t<VideoClicks></VideoClicks>\n\t\t\t\t\t</Linear>\n\t\t\t\t</Creative>\n\t\t\t</Creatives>\n\t\t</Wrapper>\n\t</Ad>\n</VAST>",
+			"adm": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST version=\"2.0\">\n\t<Ad id=\"1\">\n\t\t<Wrapper>\n\t\t\t<AdSystem>OX</AdSystem>\n\t\t\t<VASTAdTagURI><![CDATA[https://10.0.2.2:8000/static/vast/ios/vast_mp4.xml]]></VASTAdTagURI>\n\t\t\t<Impression></Impression>\n\t\t\t<Creatives>\n\t\t\t\t<Creative>\n\t\t\t\t\t<Linear>\n\t\t\t\t\t\t<TrackingEvents>\n\t\t\t\t\t\t\t<ClickTracking><![CDATA[https://10.0.2.2:8000/events/v/1.0/rc?ts=1]]></ClickTracking>\n\t\t\t\t\t\t</TrackingEvents>\n\t\t\t\t\t\t<VideoClicks></VideoClicks>\n\t\t\t\t\t</Linear>\n\t\t\t\t</Creative>\n\t\t\t</Creatives>\n\t\t</Wrapper>\n\t</Ad>\n</VAST>",
 			"adid": "test-ad-id-12345",
 			"adomain": ["openx.com"],
 			"crid": "test-creative-id-1",
