@@ -21,8 +21,8 @@
                                 "key": "",
                                 "url": "",
                                 "bids": {
-                                    "url": "10.0.2.2:8000/cache?uuid=f9dd1842-202f-11eb-adc1-0242ac120002",
-                                    "cacheId": "f9dd1842-202f-11eb-adc1-0242ac120002"
+                                    "url": "10.0.2.2:8000/cache?uuid=native-default-example",
+                                    "cacheId": "native-default-example"
                                 }
                             },
                             "targeting": {
@@ -30,8 +30,8 @@
                                 "hb_bidder_openx": "openx",
                                 "hb_cache_host": "10.0.2.2:8000",
                                 "hb_cache_host_openx": "10.0.2.2:8000",
-                                "hb_cache_id": "f9dd1842-202f-11eb-adc1-0242ac120002",
-                                "hb_cache_id_openx": "f9dd1842-202f-11eb-adc1-0242ac120002",
+                                "hb_cache_id": "native-default-example",
+                                "hb_cache_id_openx": "native-default-example",
                                 "hb_cache_path": "/cache",
                                 "hb_cache_path_openx": "/cache",
                                 "hb_env": "mobile-app",
