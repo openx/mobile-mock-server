@@ -5,7 +5,7 @@
             "id": "f381a00c-1e20-42cf-b3db-f04a3e053e01",
             "impid": "4BF23A0B-0ED2-477A-BCDC-498794246D76",
             "price": 0.15,
-            "adm": "<div id='beacon_97599' style='position:absolute;left:0px;top:0px;visibility:hidden;'><img src='https://rtb-europe-west1.openx.net/win/prebid?p=FIRST&t=2DAABBgABAAECAAIBAAsAAgAAAJocGApiQ2JVRndacTlxHBaNw_Xgj_HhqLMBFpmN0Jvj_avD_AEAHBbh9P2d_Pyv_hgW_YfWn7jth6SYAQAW_rHY9gsVBgAsHBUCABwVAgAAHCa6ofGDBBUOFQQmuKHxgwQWoICcgATWrAIAHCaew6CABBaEovGDBBaIovGDBBaGovGDBBUUHBRkFIAFABUEFQoWrAImrAJFCgAAAA&ph=a51065ab-17ee-4394-b5a7-32debc04780a'/></div><script src=\"https://s3-us-west-2.amazonaws.com/omsdk-files/compliance-js/omid-validation-verification-script-v1.js\"></script>\n<a href=\"https://www.openx.com/\"><img width=\"320\" height=\"50\" src=\"https://ssl-i.cdn.openx.com/mobile/demo-creatives/mobile-demo-banner-640x100.png\"></img></a>",
+            "adm": "<div id='beacon_97599' style='position:absolute;left:0px;top:0px;visibility:hidden;'><img src='https://10.0.2.2:8000/win/prebid?p=FIRST&t=2DAABBgABAAECAAIBAAsAAgAAAJocGApiQ2JVRndacTlxHBaNw_Xgj_HhqLMBFpmN0Jvj_avD_AEAHBbh9P2d_Pyv_hgW_YfWn7jth6SYAQAW_rHY9gsVBgAsHBUCABwVAgAAHCa6ofGDBBUOFQQmuKHxgwQWoICcgATWrAIAHCaew6CABBaEovGDBBaIovGDBBaGovGDBBUUHBRkFIAFABUEFQoWrAImrAJFCgAAAA&ph=a51065ab-17ee-4394-b5a7-32debc04780a'/></div><script src=\"https://s3-us-west-2.amazonaws.com/omsdk-files/compliance-js/omid-validation-verification-script-v1.js\"></script>\n<a href=\"https://www.openx.com/\"><img width=\"320\" height=\"50\" src=\"https://ssl-i.cdn.openx.com/mobile/demo-creatives/mobile-demo-banner-640x100.png\"></img></a>",
             "crid": "540944516",
             "w": 320,
             "h": 50,

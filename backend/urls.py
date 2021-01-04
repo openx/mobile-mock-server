@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('openrtb2/auction', views.PrebidMockView.as_view(), name='index'),
-    path('cache', views.CacheMockView.as_view(), name='index'),
+    path('win/prebid', views.EventsView.as_view(), name='events'),
     path('ma/1.0/acj', views.MockView.as_view(), name='index'),
     path('v/1.0/av', views.VideoMockView.as_view(), name='index'),
     path('api/add_mock', views.AddMockView.as_view(), name='api'),
@@ -17,5 +17,6 @@ urlpatterns = [
     path('api/set_random_no_bids', views.SetRandomNoBidsView.as_view(), name='set_random_no_bids'),
     path('api/cancel_random_no_bids', views.CancelRandomNoBidsView.as_view(), name='cancel_random_no_bids'),
     path('image', views.ImageGeneratorView.as_view(), name='image'),
+    path('cache', views.CacheMockView.as_view(), name='index'),
     re_path('events.*', views.EventsView.as_view(), name='events'),
 ]
