@@ -19,7 +19,7 @@ python3 manage.py migrate
 
 After this you can run the mock-server with predefined self-signed sertificates:
 
-**Android**: `manage.py runserver_plus 0.0.0.0:8000 --cert-file emulator.crt`
+**Android**: `python3 manage.py runserver_plus 0.0.0.0:8000 --cert-file emulator.crt`
 
 **iOS**: `python3 manage.py runserver_plus 10.0.2.2:8000 --cert-file emulator.crt`
 
