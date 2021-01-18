@@ -108,7 +108,7 @@
                     <AdVerifications>
                         <Verification vendor="openx">
                             <JavaScriptResource apiFramework="omid" browserOptional="true">
-                           <![CDATA[https://10.0.2.2:8000/static/omid-validation-verification-script.js]]>
+                           <![CDATA[http://10.0.2.2:8002/static/omid-validation-verification-script-v1-ios-video.js]]>
                             </JavaScriptResource>
                             <VerificationParameters>
                                 <![CDATA[

@@ -109,9 +109,7 @@ https://10.0.2.2:8000/events/v/1.0/rc?ts=2DAABBgABAAECAAIBAAsAAgAAAKIcGApnZ2F4WH
                         </VideoClicks>
                         <MediaFiles>
                             <MediaFile delivery="streaming" height="480" id="539733616" type="video/mp4" width="320">
-                                <![CDATA[
-https://10.0.2.2:8000/static/vertical_video_example.mp4
-]]>
+                                <![CDATA[https://10.0.2.2:8000/static/vertical_video_example.mp4]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>
@@ -122,7 +120,7 @@ https://10.0.2.2:8000/static/vertical_video_example.mp4
                     <AdVerifications>
                         <Verification vendor="iabtechlab.com-omid">
                             <JavaScriptResource apiFramework="omid" browserOptional="true">
-                                <![CDATA[https://10.0.2.2:8000/static/omid-validation-verification-script-v1-ios-video.js]]>
+                                <![CDATA[http://10.0.2.2:8002/static/omid-validation-verification-script-v1-ios-video.js]]>
                             </JavaScriptResource>
                             <TrackingEvents>
                                 <Tracking event="verificationNotExecuted">
