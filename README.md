@@ -41,12 +41,31 @@ where example.com is your domain, and 10.0.0.1 is your IP. You remove not needed
 
 ## iOS: Setup loclalhost alias
 
-You may need to add the alias `10.0.0.2` to `localhost` in this case:
+You may need to add the alias `10.0.2.2` to `localhost` in this case:
 
 `sudo ifconfig lo0 alias 10.0.2.2`
 
 See this [article](https://medium.com/@david.limkys/permanently-create-an-ifconfig-loopback-alias-macos-b7c93a8b0db) if
 you want to add the alias permanently.
+
+
+## OM-events tracking
+
+The iOS-version of OM SDK doesn't recognize custom certificates. Due this reason all mocked vast files refer to the
+`http://10.0.2.2:8002/static/omid-validation-verification-script-v1-ios-video.js` script. If you need track OM-events
+in the mock-server logs you should perform additional setup of **nginx**.
+
+You can do this in two ways.
+1. Copy the file `nginx_confs/openx_mock_server.conf` to the directory with nginx's confs 
+(f.e., /usr/local/etc/nginx/sites-enabled) and reload it:
+```
+sudo nginx -s reload
+```
+
+2. Or just copy the file `nginx_confs/nginx_openx_ios_mock_server.conf` to somewhere and run nginx:
+```
+sudo nginx -c "path_to_the_nginx_openx_ios_mock_server.conf"
+```
 
     
 # HTTP API
