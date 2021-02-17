@@ -41,7 +41,7 @@
                                 "hb_size": "300x250",
                                 "hb_size_openx": "300x250"
                             },
-                            "type": "banner",
+                            "type": "native",
                             "video": {
                                 "duration": 0,
                                 "primary_category": ""
